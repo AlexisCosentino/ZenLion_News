@@ -63,6 +63,13 @@ class TradingStrategy:
         sl_pips = volatility_in_pips * volatility_multiplier
         tp_pips = sl_pips * tp_ratio
 
+                
+        print(f'volatility: {type(volatility)}')
+        print(f'pip_size: {type(pip_size)}')
+        print(f'volatility_in_pips: {type(volatility_in_pips)}')
+        print(f'sl_pips: {type(sl_pips)}')
+        print(f'tp_pips: {type(tp_pips)}')
+
         tick = mt5.symbol_info_tick(self.symbol)
         if tick is None:
             print(f"Erreur : pas de tick pour {self.symbol}")
@@ -88,6 +95,14 @@ class TradingStrategy:
         volatility_in_pips = volatility / pip_size
         sl_pips = volatility_in_pips * volatility_multiplier
         tp_pips = sl_pips * tp_ratio
+        
+        print(f'volatility: {type(volatility)}')
+        print(f'pip_size: {type(pip_size)}')
+        print(f'volatility_in_pips: {type(volatility_in_pips)}')
+        print(f'sl_pips: {type(sl_pips)}')
+        print(f'tp_pips: {type(tp_pips)}')
+
+
 
         if direction == "buy":
             sl_price = entry_price - (sl_pips * pip_size)
