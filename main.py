@@ -52,7 +52,7 @@ def should_trigger(news, minutes=5):
     now = datetime.now(timezone.utc)
     news_time = datetime.fromisoformat(news['date_utc']).astimezone(TIMEZONE_UTC)
     elapsed = (now - news_time).total_seconds() / 60
-    print(f"{news["title"]} et le temps écoulé : {elapsed}")
+    print(f"{news['title']} et le temps écoulé : {elapsed}")
     return minutes <= elapsed < minutes+1
 
 
