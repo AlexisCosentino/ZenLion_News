@@ -1,6 +1,6 @@
 import MetaTrader5 as mt5
 import logging
-from ..config import ACCOUNT_NUMBER, PASSWORD, SERVER
+from config import ACCOUNT_NUMBER, PASSWORD, SERVER
 import time
 import pandas as pd
 

@@ -95,15 +95,8 @@ class TradingStrategy:
             grid_price = self.initial_price - (level * pip_size) if self.initial_direction == "buy" else self.initial_price + (level * pip_size)
             sl, tp, _ = self.calculate_sl_tp(self.symbol, self.initial_direction)
 
-            self.engine.place_pending_order(
-                symbol=self.symbol,
-                direction=self.initial_direction,
-                lot=0.01,
-                sl=sl,
-                tp=tp,
-                comment=f"grid_{level}",
-                price=grid_price
-            )
+            self.engine.place_pending_order(self.symbol, self.initial_direction, 0.01, sl, tp, f"grid_{level}", grid_price)
+
             print(f"[GRID] Pending order placé à {grid_price:.5f} ({level} pips)")
             self.grid_trades_done.append(level)
 
@@ -117,15 +110,7 @@ class TradingStrategy:
         sl = hedge_price + sl_pips * pip_size if direction == "sell" else hedge_price - sl_pips * pip_size
         tp = hedge_price - tp_pips * pip_size if direction == "sell" else hedge_price + tp_pips * pip_size
 
-        self.engine.place_pending_order(
-            symbol=self.symbol,
-            direction=direction,
-            lot=0.01,
-            sl=sl,
-            tp=tp,
-            comment="hedge",
-            price=hedge_price
-        )
+        self.engine.place_pending_order(self.symbol, direction, 0.01, sl, tp, "hedge", hedge_price)
         print(f"[HEDGE] Pending hedge order placé à {hedge_price:.5f}")
         
 

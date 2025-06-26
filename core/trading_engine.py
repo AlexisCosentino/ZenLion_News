@@ -108,6 +108,8 @@ class TradingEngine:
         """
         action = mt5.ORDER_TYPE_BUY_LIMIT if order_type == "buy" else mt5.ORDER_TYPE_SELL_LIMIT
         expiration_time = datetime.now(timezone.utc) + timedelta(minutes=30)
+        
+        expiration_time = int(expiration_time.timestamp())
 
         
         return {
@@ -214,6 +216,8 @@ class TradingEngine:
             symbol, order_type, lot_size, stop_loss, take_profit, comment, price
         )
         
+        print(request)
+        
         # Envoi de l'ordre initial
         result = mt5.order_send(request)
         
@@ -271,6 +275,8 @@ class TradingEngine:
         request = self._prepare_pending_order_request(
             symbol, order_type, lot_size, stop_loss, take_profit, comment, price
         )
+        
+        print(request)
         
         # Envoi de l'ordre initial
         result = mt5.order_send(request)

@@ -6,6 +6,7 @@ import pytz
 from core.forexfactory_news_fetcher import get_forex_week_filename, get_forex_calendar
 from core.trading_strategy import TradingStrategy
 from core.symbol_selector import SymbolSelector
+from core.mt5_client import MT5Client
 
 # Configuration
 DATA_DIR = "weekly_news_json"
@@ -16,10 +17,12 @@ def get_last_sunday():
     now = datetime.now(timezone.utc)
     return now - timedelta(days=(now.weekday() + 1) % 7)
 
+
 def get_week_filename():
     """Génère le nom du fichier JSON pour la semaine courante"""
     sunday = get_last_sunday()
     return os.path.join(DATA_DIR, f"forex_{sunday.strftime('%Y-%m-%d')}.json")
+
 
 def load_news_file(filename):
     """Charge le fichier JSON et convertit les dates en UTC"""
@@ -40,12 +43,14 @@ def load_news_file(filename):
                 news['date_utc'] = None
     return data
 
+
 def get_todays_news(news_data):
     """Filtre les news pour aujourd'hui en UTC"""
     today = datetime.now(timezone.utc).date()
     return [news for news in news_data 
             if news.get('date_utc') and 
             datetime.fromisoformat(news['date_utc']).date() == today]
+
 
 def should_trigger(news, minutes=5):
     """Vérifie si on est dans la fenêtre de déclenchement"""
@@ -74,7 +79,10 @@ def mock_data(todays_news):
     return todays_news
 
 def main():
+    mt5 = MT5Client()
+    mt5.initialize_mt5()
     symbolSelector = SymbolSelector()
+    
 
     try:
         while True:
@@ -98,7 +106,6 @@ def main():
                 
                 # 3. Vérifier les news à traiter
                 for news in todays_news:
-                    print(news)
                     if should_trigger(news):
                         print(f"\n=== NEWS TRIGGER ===")
                         print(f"Title: {news['title']}")
@@ -109,8 +116,8 @@ def main():
                         # Ici vous ajoutez votre logique de trading
                         if news['impact'] == 'High':
                             comment = news['title'][:10]
-                            print(f">>> Executing HIGH impact strategy --> {comment}")
                             symbol = symbolSelector.get_best_symbol(news['country'])
+                            print(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
                             tradingStrategy = TradingStrategy(symbol, comment)
                             tradingStrategy.execute_strategy()
             #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
