@@ -109,6 +109,8 @@ class TradingEngine:
         """
 
          # Choix du type d'ordre pending selon le contexte
+        print(f'price = {type(price)}')
+        print(f'price = {type(current_price)}')
         if order_type == "buy":
             action = mt5.ORDER_TYPE_BUY_LIMIT if price < current_price else mt5.ORDER_TYPE_BUY_STOP
         elif order_type == "sell":

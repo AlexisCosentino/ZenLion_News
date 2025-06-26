@@ -114,7 +114,6 @@ class TradingStrategy:
         pip_size = self.get_pip_size(self.symbol)
         for level in self.grid_levels:
             grid_price = self.initial_price - (level * pip_size) if self.initial_direction == "buy" else self.initial_price + (level * pip_size)
-            sl, tp, _ = self.calculate_sl_tp(self.initial_direction)
             sl, tp = self.calculate_sl_tp_from_price(self.initial_direction, grid_price)
 
             self.engine.place_pending_order(self.symbol, self.initial_direction, 0.01, sl, tp, f"grid_{level}", grid_price, self.initial_price)
