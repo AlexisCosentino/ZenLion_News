@@ -48,7 +48,7 @@ class TradingStrategy:
         return max(highs) - min(lows)
 
 
-    def calculate_sl_tp(self, symbol, direction, volatility_multiplier=1.5, tp_ratio=2):
+    def calculate_sl_tp(self, direction, volatility_multiplier=1.5, tp_ratio=2):
         """
         Calcule les prix de SL et TP basés sur la volatilité récente.
         
@@ -57,15 +57,15 @@ class TradingStrategy:
         :param tp_ratio: Ratio TP/SL (ex: 2 pour un RR 1:2)
         :return: (sl_price, tp_price)
         """
-        volatility = self.get_volatility(symbol)  # Volatilité en pips
+        volatility = self.get_volatility(self.symbol)  # Volatilité en pips
         pip_size = self.get_pip_size(self.symbol)
         volatility_in_pips = volatility / pip_size
         sl_pips = volatility_in_pips * volatility_multiplier
         tp_pips = sl_pips * tp_ratio
 
-        tick = mt5.symbol_info_tick(symbol)
+        tick = mt5.symbol_info_tick(self.symbol)
         if tick is None:
-            print(f"Erreur : pas de tick pour {symbol}")
+            print(f"Erreur : pas de tick pour {self.symbol}")
             return (None, None, None)
         entry_price = tick.ask if direction == "buy" else tick.bid
         
@@ -77,6 +77,27 @@ class TradingStrategy:
             tp_price = entry_price - (tp_pips * pip_size)  # TP en dessous
         
         return (sl_price, tp_price, entry_price)
+    
+
+    def calculate_sl_tp_from_price(self, direction, entry_price, volatility_multiplier=1.5, tp_ratio=2):
+        """
+        Calcule les SL/TP à partir d’un prix donné, plutôt que du prix marché.
+        """
+        volatility = self.get_volatility(self.symbol)
+        pip_size = self.get_pip_size(self.symbol)
+        volatility_in_pips = volatility / pip_size
+        sl_pips = volatility_in_pips * volatility_multiplier
+        tp_pips = sl_pips * tp_ratio
+
+        if direction == "buy":
+            sl_price = entry_price - (sl_pips * pip_size)
+            tp_price = entry_price + (tp_pips * pip_size)
+        else:
+            sl_price = entry_price + (sl_pips * pip_size)
+            tp_price = entry_price - (tp_pips * pip_size)
+
+        return (sl_price, tp_price)
+
 
     
     
@@ -93,9 +114,10 @@ class TradingStrategy:
         pip_size = self.get_pip_size(self.symbol)
         for level in self.grid_levels:
             grid_price = self.initial_price - (level * pip_size) if self.initial_direction == "buy" else self.initial_price + (level * pip_size)
-            sl, tp, _ = self.calculate_sl_tp(self.symbol, self.initial_direction)
+            sl, tp, _ = self.calculate_sl_tp(self.initial_direction)
+            sl, tp = self.calculate_sl_tp_from_price(self.initial_direction, grid_price)
 
-            self.engine.place_pending_order(self.symbol, self.initial_direction, 0.01, sl, tp, f"grid_{level}", grid_price)
+            self.engine.place_pending_order(self.symbol, self.initial_direction, 0.01, sl, tp, f"grid_{level}", grid_price, self.initial_price)
 
             print(f"[GRID] Pending order placé à {grid_price:.5f} ({level} pips)")
             self.grid_trades_done.append(level)
@@ -110,7 +132,7 @@ class TradingStrategy:
         sl = hedge_price + sl_pips * pip_size if direction == "sell" else hedge_price - sl_pips * pip_size
         tp = hedge_price - tp_pips * pip_size if direction == "sell" else hedge_price + tp_pips * pip_size
 
-        self.engine.place_pending_order(self.symbol, direction, 0.01, sl, tp, "hedge", hedge_price)
+        self.engine.place_pending_order(self.symbol, direction, 0.01, sl, tp, "hedge", hedge_price, self.initial_price)
         print(f"[HEDGE] Pending hedge order placé à {hedge_price:.5f}")
         
 

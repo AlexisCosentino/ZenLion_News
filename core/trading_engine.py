@@ -88,6 +88,7 @@ class TradingEngine:
         take_profit: float,
         comment: str,
         price: float,
+        current_price: float,
         reduced_lot: bool = False
     ) -> dict:
         """
@@ -106,7 +107,19 @@ class TradingEngine:
         Returns:
             dict: La requête d'ordre formatée
         """
-        action = mt5.ORDER_TYPE_BUY_LIMIT if order_type == "buy" else mt5.ORDER_TYPE_SELL_LIMIT
+
+         # Choix du type d'ordre pending selon le contexte
+        if order_type == "buy":
+            action = mt5.ORDER_TYPE_BUY_LIMIT if price < current_price else mt5.ORDER_TYPE_BUY_STOP
+        elif order_type == "sell":
+            action = mt5.ORDER_TYPE_SELL_LIMIT if price > current_price else mt5.ORDER_TYPE_SELL_STOP
+        else:
+            raise ValueError("order_type doit être 'buy' ou 'sell'")
+
+
+
+
+        
         expiration_time = datetime.now(timezone.utc) + timedelta(minutes=30)
         
         expiration_time = int(expiration_time.timestamp())
@@ -251,7 +264,8 @@ class TradingEngine:
         stop_loss: float,
         take_profit: float,
         comment: str,
-        price: float
+        price: float,
+        current_price: float
     ) -> bool:
         """
         Place un ordre sur le marché avec gestion des erreurs et tentative de lot réduit.
@@ -273,7 +287,7 @@ class TradingEngine:
             
         # Préparation de la requête initiale
         request = self._prepare_pending_order_request(
-            symbol, order_type, lot_size, stop_loss, take_profit, comment, price
+            symbol, order_type, lot_size, stop_loss, take_profit, comment, price, current_price
         )
         
         print(request)
