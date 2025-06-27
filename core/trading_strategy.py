@@ -139,9 +139,11 @@ class TradingStrategy:
 
     def execute_strategy(self):
         trend = self.detect_trend(self.symbol)
-        #if not trend:
-        #   return
-
+        ################################################ DEV ##################################################
+        trend="buy" 
+        ################################################ DEV ##################################################
+        if not trend:
+           return
         sl, tp, price = self.calculate_sl_tp(trend)
         initial_trade = self.engine.place_order(self.symbol, trend, 0.01, sl, tp, self.comment)
 
@@ -154,5 +156,7 @@ class TradingStrategy:
             # Placer les pending orders directement après
             self.place_pending_grid_orders()
             self.place_pending_hedge_order()
+            return True
         else:
             print("❌ Erreur lors du placement du trade initial.")
+            return False

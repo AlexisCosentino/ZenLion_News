@@ -25,24 +25,27 @@ def get_week_filename():
 
 
 def load_news_file(filename):
-    """Charge le fichier JSON et convertit les dates en UTC"""
+    """Charge le fichier JSON"""
+    with open(filename, 'r') as f:
+        data = json.load(f)
+    return data
+
+def news_processed(title, filename):
+    """Marque une news comme traitée en ajoutant un champ 'processed'"""
     with open(filename, 'r') as f:
         data = json.load(f)
     
     for news in data:
-        if 'date' in news:
-            try:
-                # Convertit la date en UTC
-                dt = datetime.fromisoformat(news['date'])
-                if dt.tzinfo is None:
-                    dt = pytz.utc.localize(dt)
-                else:
-                    dt = dt.astimezone(TIMEZONE_UTC)
-                news['date_utc'] = dt.isoformat()
-            except ValueError:
-                news['date_utc'] = None
-    return data
-
+            if news.get('title') == title:
+                news['processed'] = {
+                    'status': True,
+                    'timestamp': datetime.now(timezone.utc)  # Ajoute la date/heure
+                }
+                break
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+    
+    
 
 def get_todays_news(news_data):
     """Filtre les news pour aujourd'hui en UTC"""
@@ -119,7 +122,9 @@ def main():
                             symbol = symbolSelector.get_best_symbol(news['country'])
                             print(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
                             tradingStrategy = TradingStrategy(symbol, comment)
-                            tradingStrategy.execute_strategy()
+                            result = tradingStrategy.execute_strategy()
+                            if result:
+                                news_processed(news['title'], filename)
             #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
             if now.weekday == 6 and now.hour == 20 and now.minute == 30:
                 get_forex_calendar()
