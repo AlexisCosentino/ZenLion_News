@@ -109,8 +109,6 @@ class TradingEngine:
         """
 
          # Choix du type d'ordre pending selon le contexte
-        print(f'price = {type(price)}')
-        print(f'price = {type(current_price)}')
         if order_type == "buy":
             action = mt5.ORDER_TYPE_BUY_LIMIT if price < current_price else mt5.ORDER_TYPE_BUY_STOP
         elif order_type == "sell":
@@ -118,13 +116,12 @@ class TradingEngine:
         else:
             raise ValueError("order_type doit être 'buy' ou 'sell'")
 
-
-
-
         
-        expiration_time = datetime.now(timezone.utc) + timedelta(minutes=30)
-        
-        expiration_time = int(expiration_time.timestamp())
+        tick = mt5.symbol_info_tick(symbol)
+        server_now = datetime.fromtimestamp(tick.time)
+
+        expiration_time = server_now + timedelta(minutes=30)
+        expiration_timestamp = int(expiration_time.timestamp())
 
         
         return {
@@ -139,7 +136,7 @@ class TradingEngine:
             "magic": self.magic_number,
             "comment": comment,
             "type_time": mt5.ORDER_TIME_SPECIFIED,
-            "expiration": expiration_time,
+            "expiration": expiration_timestamp,
             "type_filling": mt5.ORDER_FILLING_RETURN,
         }
     

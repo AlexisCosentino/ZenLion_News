@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import MetaTrader5 as mt5
 from datetime import datetime
 from core.trading_engine import TradingEngine
@@ -43,9 +44,9 @@ class TradingStrategy:
         if rates is None or len(rates) < lookback:
             print("Erreur : données de volatilité insuffisantes.")
             return 0
-        highs = [bar['high'] for bar in rates]
-        lows = [bar['low'] for bar in rates]
-        return max(highs) - min(lows)
+        highs = rates['high']
+        lows = rates['low']
+        return float(np.max(highs) - np.min(lows))
 
 
     def calculate_sl_tp(self, direction, volatility_multiplier=1.5, tp_ratio=2):
@@ -62,13 +63,6 @@ class TradingStrategy:
         volatility_in_pips = volatility / pip_size
         sl_pips = volatility_in_pips * volatility_multiplier
         tp_pips = sl_pips * tp_ratio
-
-                
-        print(f'volatility: {type(volatility)}')
-        print(f'pip_size: {type(pip_size)}')
-        print(f'volatility_in_pips: {type(volatility_in_pips)}')
-        print(f'sl_pips: {type(sl_pips)}')
-        print(f'tp_pips: {type(tp_pips)}')
 
         tick = mt5.symbol_info_tick(self.symbol)
         if tick is None:
@@ -95,14 +89,7 @@ class TradingStrategy:
         volatility_in_pips = volatility / pip_size
         sl_pips = volatility_in_pips * volatility_multiplier
         tp_pips = sl_pips * tp_ratio
-        
-        print(f'volatility: {type(volatility)}')
-        print(f'pip_size: {type(pip_size)}')
-        print(f'volatility_in_pips: {type(volatility_in_pips)}')
-        print(f'sl_pips: {type(sl_pips)}')
-        print(f'tp_pips: {type(tp_pips)}')
-
-
+    
 
         if direction == "buy":
             sl_price = entry_price - (sl_pips * pip_size)
@@ -152,11 +139,10 @@ class TradingStrategy:
 
     def execute_strategy(self):
         trend = self.detect_trend(self.symbol)
+        #if not trend:
+        #   return
 
-        if not trend:
-            return
-
-        sl, tp, price = self.calculate_sl_tp(self.symbol, trend)
+        sl, tp, price = self.calculate_sl_tp(trend)
         initial_trade = self.engine.place_order(self.symbol, trend, 0.01, sl, tp, self.comment)
 
         if initial_trade:
