@@ -1,6 +1,8 @@
 import MetaTrader5 as mt5
 import logging
 from datetime import datetime, timedelta, timezone
+import time
+
 
 class TradingEngine:
     def __init__(self):
@@ -120,7 +122,7 @@ class TradingEngine:
         tick = mt5.symbol_info_tick(symbol)
         server_now = datetime.fromtimestamp(tick.time)
 
-        expiration_time = server_now + timedelta(minutes=30)
+        expiration_time = server_now + timedelta(minutes=15)
         expiration_timestamp = int(expiration_time.timestamp())
 
         
@@ -316,7 +318,7 @@ class TradingEngine:
         return success
     
     
-    def close_position(self, symbol_to_close: str, comment: str = "16h") -> bool:
+    def close_position_by_symbol(self, symbol_to_close: str, comment: str = "16h") -> bool:
         """
         Ferme toutes les positions pour un symbole donné.
         
@@ -384,6 +386,75 @@ class TradingEngine:
                 logging.info(f"Position {ticket} ({symbol}) fermée avec succès.")
                 
         return all_closed
+    
+
+    def close_positions_after_45min(self) -> bool:
+        """
+        Ferme toutes les positions si plus de 45min.
+                    
+        Returns:
+            bool: True si toutes les positions ont été fermées avec succès, False sinon
+        """
+        positions = mt5.positions_get()
+        if positions is None:
+            return
+            
+        if len(positions) == 0:
+            return
+            
+        for position in positions:
+            symbol = position.symbol
+            volume = position.volume
+            ticket = position.ticket
+            position_type = position.type
+            position_open_time = position.time
+
+            # Heure actuelle en secondes (timestamp Unix)
+            current_time = time.time()
+            position_open_time =position_open_time - (2 * 3600) #enleve 2h pour obtenir UTC
+    
+            # Convertir la durée en minutes
+            duration_in_minutes = (current_time - position_open_time) / 60
+            
+            if duration_in_minutes > 45:
+                # Détermination du type d'ordre de fermeture
+                close_type = mt5.ORDER_TYPE_SELL if position_type == mt5.ORDER_TYPE_BUY else mt5.ORDER_TYPE_BUY
+                
+                # Récupération du prix actuel
+                tick = mt5.symbol_info_tick(symbol)
+                if tick is None:
+                    logging.error(f"Impossible de récupérer le prix pour {symbol}")
+                    all_closed = False
+                    continue
+                    
+                price = tick.bid if close_type == mt5.ORDER_TYPE_SELL else tick.ask
+                
+                # Préparation de la requête de fermeture
+                close_request = {
+                    "action": mt5.TRADE_ACTION_DEAL,
+                    "symbol": symbol,
+                    "volume": volume,
+                    "type": close_type,
+                    "position": ticket,
+                    "price": price,
+                    "deviation": self.deviation,
+                    "magic": self.magic_number,
+                    "comment": "+45min",
+                    "type_time": mt5.ORDER_TIME_GTC,
+                    "type_filling": mt5.ORDER_FILLING_IOC,
+                }
+                
+                # Envoi de l'ordre de fermeture
+                result = mt5.order_send(close_request)
+                
+                # Traitement du résultat
+                if result is None:
+                    logging.error(f"Erreur lors de la fermeture de la position {ticket}. Erreur: {mt5.last_error()}")
+                elif result.retcode != mt5.TRADE_RETCODE_DONE:
+                    logging.error(f"Échec de la fermeture de la position {ticket}. Code: {result.retcode}, Comment: {result.comment}")
+                else:
+                    logging.info(f"Position {ticket} ({symbol}) fermée avec succès après 45min.")
+
     
     def get_open_positions(self):
         positions = mt5.positions_get()

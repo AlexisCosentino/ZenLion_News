@@ -6,6 +6,7 @@ import pytz
 from core.forexfactory_news_fetcher import get_forex_week_filename, get_forex_calendar
 from core.trading_strategy import TradingStrategy
 from core.symbol_selector import SymbolSelector
+from core.trading_engine import TradingEngine
 from core.mt5_client import MT5Client
 
 # Configuration
@@ -64,6 +65,7 @@ def should_trigger(news, minutes=5):
     return minutes <= elapsed < minutes+1
 
 
+
 def mock_data(todays_news):
     # maintenant en UTC -4
     now_utc_minus_4 = datetime.now(timezone.utc) - timedelta(hours=4) + timedelta(minutes=5)
@@ -85,6 +87,7 @@ def main():
     mt5 = MT5Client()
     mt5.initialize_mt5()
     symbolSelector = SymbolSelector()
+    tradingEngine = TradingEngine()
     
 
     try:
@@ -129,6 +132,7 @@ def main():
             #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
             if now.weekday == 6 and now.hour == 20 and now.minute == 30:
                 get_forex_calendar()
+            tradingEngine.close_positions_after_45min()
             time.sleep(60)
 
                 
