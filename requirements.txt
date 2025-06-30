@@ -4,3 +4,4 @@ pandas
 schedule
 pytz
 requests
+tabulate

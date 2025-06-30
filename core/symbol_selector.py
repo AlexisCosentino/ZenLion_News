@@ -26,6 +26,8 @@ class SymbolSelector:
             for symbol in self.symbol_priority[country]:
                 if mt5.symbol_info(symbol) is not None:
                     return symbol
+        elif country == "CNY":
+            return "AUDUSD"
         
         # Fallback : USD/XXX si la devise n'est pas majeure
         fallback_symbol = f"USD{country}"

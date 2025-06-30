@@ -120,11 +120,12 @@ def main():
                         if news['impact'] == 'High':
                             comment = news['title'][:10]
                             symbol = symbolSelector.get_best_symbol(news['country'])
-                            print(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
-                            tradingStrategy = TradingStrategy(symbol, comment)
-                            result = tradingStrategy.execute_strategy()
-                            if result:
-                                news_processed(news['title'], filename)
+                            if symbol is not None:
+                                print(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
+                                tradingStrategy = TradingStrategy(symbol, comment)
+                                result = tradingStrategy.execute_strategy()
+                                if result:
+                                    news_processed(news['title'], filename)
             #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
             if now.weekday == 6 and now.hour == 20 and now.minute == 30:
                 get_forex_calendar()

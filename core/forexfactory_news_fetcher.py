@@ -1,6 +1,7 @@
 import requests
 import json
 from datetime import datetime, timedelta
+from tabulate import tabulate
 import schedule
 import time
 import pytz
@@ -26,6 +27,7 @@ def get_forex_calendar():
             
         print(f"Calendrier récupéré et sauvegardé dans {filename}")
         process_news(filename)
+        print_pretty_news_table(filename)
         return data
         
     except requests.exceptions.RequestException as e:
@@ -176,3 +178,22 @@ def process_news(filename):
         json.dump(data, f, indent=2)
     
     return data
+    
+    
+def print_pretty_news_table(filename):
+    # Charger les données
+    with open(filename, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Trier par date_utc du plus récent au plus ancien
+    data_sorted = sorted(data, key=lambda x: datetime.fromisoformat(x["date_utc"]), reverse=False)
+
+    # Préparer le tableau
+    table = [
+        [entry["title"], entry["country"], entry["impact"], entry["date_utc"]]
+        for entry in data_sorted
+    ]
+
+    # Afficher avec tabulate pour un rendu propre
+    headers = ["Title", "Country", "Impact", "Date UTC"]
+    print(tabulate(table, headers=headers, tablefmt="pretty"))
