@@ -100,7 +100,7 @@ def main():
                 filename = f"weekly_news_json/{filename}"
                 if not os.path.exists(filename):
                     print(f"Fichier non trouvé: {filename}")
-                    return
+                    continue
                 
                 news_data = load_news_file(filename)
                 

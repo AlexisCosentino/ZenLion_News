@@ -27,22 +27,12 @@ def get_forex_calendar():
             
         print(f"Calendrier récupéré et sauvegardé dans {filename}")
         process_news(filename)
-        print_pretty_news_table(filename)
+        save_pretty_news_table(filename)
         return data
         
     except requests.exceptions.RequestException as e:
         print(f"Erreur lors de la récupération du calendrier: {e}")
         return None
-
-def schedule_weekly_download():
-    # Planifie l'exécution tous les dimanches à 8h du matin
-    schedule.every().sunday.at("08:05").do(get_forex_calendar)
-    
-    print("Programmation activée - récupération tous les dimanches à 08:00")
-    
-    while True:
-        schedule.run_pending()
-        time.sleep(60)  # Vérifie toutes les minutes
 
 
 def get_forex_week_filename():
@@ -54,7 +44,6 @@ def get_forex_week_filename():
     
     # Format: forex_YYYY-MM-DD_semaine.json (où la date est le dimanche)
     return f"forex_{sunday.strftime('%Y-%m-%d')}.json"
-
 
 
 def add_utc_date_from_data(data):
@@ -71,6 +60,7 @@ def add_utc_date_from_data(data):
             except ValueError:
                 news['date_utc'] = None
     return data
+
 
 def upgrade_impact_for_multiple_news(data):
     # Trie les news par pays puis par date
@@ -101,6 +91,7 @@ def upgrade_impact_for_multiple_news(data):
         i += 1
     return sorted_news
 
+
 def filter_and_upgrade_special_news(data):
     keywords = ["Powell", "Lagarde", "FOMC", "ECB", "BOJ", "Rate Statement"]
     filtered_data = []
@@ -116,6 +107,7 @@ def filter_and_upgrade_special_news(data):
             filtered_data.append(news)
     
     return filtered_data
+
 
 def merge_close_news(data):
     if not data:
@@ -157,6 +149,7 @@ def merge_close_news(data):
     
     return merged_news
 
+
 def process_news(filename):
     # Étape 1: Ajouter les dates UTC
     with open(filename, 'r') as f:
@@ -178,22 +171,33 @@ def process_news(filename):
         json.dump(data, f, indent=2)
     
     return data
-    
-    
-def print_pretty_news_table(filename):
-    # Charger les données
-    with open(filename, "r", encoding="utf-8") as f:
+
+
+def save_pretty_news_table(filename_json):
+    # Charger les données JSON
+
+    output_txt = filename_json.replace(".json", ".txt")
+    output_txt = output_txt.replace("weekly_news_json/", "weekly_news_pretty/")
+    with open(filename_json, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # Trier par date_utc du plus récent au plus ancien
-    data_sorted = sorted(data, key=lambda x: datetime.fromisoformat(x["date_utc"]), reverse=False)
+    # Trier par date_utc (du plus ancien au plus récent)
+    data_sorted = sorted(data, key=lambda x: datetime.fromisoformat(x["date_utc"]))
 
-    # Préparer le tableau
+    # Préparer les lignes du tableau
     table = [
         [entry["title"], entry["country"], entry["impact"], entry["date_utc"]]
         for entry in data_sorted
     ]
 
-    # Afficher avec tabulate pour un rendu propre
+    # Définir les en-têtes du tableau
     headers = ["Title", "Country", "Impact", "Date UTC"]
-    print(tabulate(table, headers=headers, tablefmt="pretty"))
+
+    # Générer le tableau au format texte
+    pretty_table = tabulate(table, headers=headers, tablefmt="pretty")
+
+    # Sauvegarder dans un fichier .txt
+    with open(output_txt, "w", encoding="utf-8") as f:
+        f.write(pretty_table)
+
+    print(f"✅ Tableau sauvegardé dans : {output_txt}")
