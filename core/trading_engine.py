@@ -230,7 +230,7 @@ class TradingEngine:
             symbol, order_type, lot_size, stop_loss, take_profit, comment, price
         )
         
-        print(request)
+        #print(request)
         
         # Envoi de l'ordre initial
         result = mt5.order_send(request)
@@ -291,7 +291,7 @@ class TradingEngine:
             symbol, order_type, lot_size, stop_loss, take_profit, comment, price, current_price
         )
         
-        print(request)
+        #print(request)
         
         # Envoi de l'ordre initial
         result = mt5.order_send(request)
@@ -464,7 +464,7 @@ class TradingEngine:
     def get_pip_size(self, symbol):
         info = mt5.symbol_info(symbol)
         if info is None:
-            print(f"Erreur : pas d'info pour {symbol}")
+            logging.error(f"Erreur : pas d'info pour {symbol}")
             return 0.0001  # Valeur par défaut
         digits = info.digits
         return 0.01 if digits == 3 or digits == 2 else 0.0001

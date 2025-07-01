@@ -5,6 +5,8 @@ from tabulate import tabulate
 import schedule
 import time
 import pytz
+import logging
+
 
 # Configuration
 DATA_DIR = "weekly_news_json"
@@ -25,13 +27,13 @@ def get_forex_calendar():
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
             
-        print(f"Calendrier récupéré et sauvegardé dans {filename}")
+        logging.info(f"Calendrier récupéré et sauvegardé dans {filename}")
         process_news(filename)
         save_pretty_news_table(filename)
         return data
         
     except requests.exceptions.RequestException as e:
-        print(f"Erreur lors de la récupération du calendrier: {e}")
+        logging.error(f"Erreur lors de la récupération du calendrier: {e}")
         return None
 
 
@@ -200,4 +202,4 @@ def save_pretty_news_table(filename_json):
     with open(output_txt, "w", encoding="utf-8") as f:
         f.write(pretty_table)
 
-    print(f"✅ Tableau sauvegardé dans : {output_txt}")
+    logging.info(f"✅ Tableau sauvegardé dans : {output_txt}")

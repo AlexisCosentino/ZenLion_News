@@ -3,6 +3,8 @@ import numpy as np
 import MetaTrader5 as mt5
 from datetime import datetime
 from core.trading_engine import TradingEngine
+import logging
+
 
 
 class TradingStrategy:
@@ -24,7 +26,7 @@ class TradingStrategy:
         """Détecte la tendance sur les dernières 'lookback' bougies M1."""
         rates = mt5.copy_rates_from_pos(symbol, timeframe, 0, lookback)
         if rates is None or len(rates) < lookback:
-            print("Erreur : Données MT5 insuffisantes.")
+            logging.error("Erreur : Données MT5 insuffisantes.")
             return None
         
         df = pd.DataFrame(rates)
@@ -42,7 +44,7 @@ class TradingStrategy:
     def get_volatility(self, symbol, timeframe=mt5.TIMEFRAME_M1, lookback=3):
         rates = mt5.copy_rates_from_pos(symbol, timeframe, 0, lookback)
         if rates is None or len(rates) < lookback:
-            print("Erreur : données de volatilité insuffisantes.")
+            logging.error("Erreur : données de volatilité insuffisantes.")
             return 0
         highs = rates['high']
         lows = rates['low']
@@ -66,7 +68,7 @@ class TradingStrategy:
 
         tick = mt5.symbol_info_tick(self.symbol)
         if tick is None:
-            print(f"Erreur : pas de tick pour {self.symbol}")
+            logging.error(f"Erreur : pas de tick pour {self.symbol}")
             return (None, None, None)
         entry_price = tick.ask if direction == "buy" else tick.bid
         
@@ -106,7 +108,7 @@ class TradingStrategy:
     def get_pip_size(self, symbol):
         info = mt5.symbol_info(symbol)
         if info is None:
-            print(f"Erreur : pas d'info pour {symbol}")
+            logging.error(f"Erreur : pas d'info pour {symbol}")
             return 0.0001  # Valeur par défaut
         digits = info.digits
         return 0.01 if digits == 3 or digits == 2 else 0.0001
@@ -120,7 +122,7 @@ class TradingStrategy:
 
             self.engine.place_pending_order(self.symbol, self.initial_direction, 0.01, sl, tp, f"grid_{level}", grid_price, self.initial_price)
 
-            print(f"[GRID] Pending order placé à {grid_price:.5f} ({level} pips)")
+            logging.info(f"[GRID] Pending order placé à {grid_price:.5f} ({level} pips)")
             self.grid_trades_done.append(level)
 
 
@@ -134,7 +136,7 @@ class TradingStrategy:
         tp = hedge_price - tp_pips * pip_size if direction == "sell" else hedge_price + tp_pips * pip_size
 
         self.engine.place_pending_order(self.symbol, direction, 0.01, sl, tp, "hedge", hedge_price, self.initial_price)
-        print(f"[HEDGE] Pending hedge order placé à {hedge_price:.5f}")
+        logging.info(f"[HEDGE] Pending hedge order placé à {hedge_price:.5f}")
         
 
     def execute_strategy(self):
@@ -143,6 +145,7 @@ class TradingStrategy:
         #trend="buy" 
         ################################################ DEV ##################################################
         if not trend:
+           logging.info(f"Pas de trend détecté sur {self.symbol}")
            return
         sl, tp, price = self.calculate_sl_tp(trend)
         initial_trade = self.engine.place_order(self.symbol, trend, 0.01, sl, tp, self.comment)
@@ -151,12 +154,12 @@ class TradingStrategy:
             self.initial_direction = trend
             self.initial_price = price
             self.hedge_active = False
-            print("✅ Trade initial placé avec succès.")
+            logging.info("✅ Trade initial placé avec succès.")
 
             # Placer les pending orders directement après
             self.place_pending_grid_orders()
             self.place_pending_hedge_order()
             return True
         else:
-            print("❌ Erreur lors du placement du trade initial.")
+            logging.error("❌ Erreur lors du placement du trade initial.")
             return False

@@ -8,10 +8,28 @@ from core.trading_strategy import TradingStrategy
 from core.symbol_selector import SymbolSelector
 from core.trading_engine import TradingEngine
 from core.mt5_client import MT5Client
+import logging
 
 # Configuration
 DATA_DIR = "weekly_news_json"
 TIMEZONE_UTC = pytz.utc
+
+# Crée le dossier logs s'il n'existe pas
+os.makedirs('logs', exist_ok=True)
+# Configuration des logs
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Ajoute un handler pour écrire dans un fichier
+log_filename = f'logs/logfile_zenlion_news_{datetime.now().strftime("%d-%m-%Y_%H-%M")}.txt'
+file_handler = logging.FileHandler(log_filename) 
+file_handler.setLevel(logging.INFO)  # Niveau de log que tu veux enregistrer dans le fichier
+
+# Crée un format pour le fichier de log (tu peux le personnaliser si besoin)
+file_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(file_format)
+
+# Ajoute ce handler au root logger
+logging.getLogger().addHandler(file_handler)
+
 
 def get_last_sunday():
     """Retourne le dimanche dernier en UTC"""
@@ -61,7 +79,7 @@ def should_trigger(news, minutes=5):
     now = datetime.now(timezone.utc)
     news_time = datetime.fromisoformat(news['date_utc']).astimezone(TIMEZONE_UTC)
     elapsed = (now - news_time).total_seconds() / 60
-    print(f"{news['title']} et le temps écoulé : {elapsed}")
+    # print(f"{news['title']} et le temps écoulé : {elapsed}")
     return minutes <= elapsed < minutes+1
 
 
@@ -99,25 +117,25 @@ def main():
                 filename = get_forex_week_filename()
                 filename = f"weekly_news_json/{filename}"
                 if not os.path.exists(filename):
-                    print(f"Fichier non trouvé: {filename}")
+                    logging.error(f"Fichier non trouvé: {filename}")
                     continue
                 
                 news_data = load_news_file(filename)
                 
                 # 2. Filtrer les news d'aujourd'hui
                 todays_news = get_todays_news(news_data)
-                print(f"Found {len(todays_news)} news today")
+                logging.info(f"Found {len(todays_news)} news today")
 
                 # mock_data(todays_news)
                 
                 # 3. Vérifier les news à traiter
                 for news in todays_news:
                     if should_trigger(news):
-                        print(f"\n=== NEWS TRIGGER ===")
-                        print(f"Title: {news['title']}")
-                        print(f"Time (UTC): {news['date_utc']}")
-                        print(f"Country: {news['country']}")
-                        print(f"Impact: {news.get('impact', 'N/A')}")
+                        logging.info(f"\n=== NEWS TRIGGER ===")
+                        logging.info(f"Title: {news['title']}")
+                        logging.info(f"Time (UTC): {news['date_utc']}")
+                        logging.info(f"Country: {news['country']}")
+                        logging.info(f"Impact: {news.get('impact', 'N/A')}")
                         
                         # Ici vous ajoutez votre logique de trading
                         if news['impact'] == 'High':
@@ -138,7 +156,7 @@ def main():
                 
                 
     except Exception as e:
-        print(f"Error: {e}")
+        logging.error(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
