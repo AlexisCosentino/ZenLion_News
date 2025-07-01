@@ -202,4 +202,4 @@ def save_pretty_news_table(filename_json):
     with open(output_txt, "w", encoding="utf-8") as f:
         f.write(pretty_table)
 
-    logging.info(f"✅ Tableau sauvegardé dans : {output_txt}")
+    logging.info(f"OK - Tableau sauvegardé dans : {output_txt}")

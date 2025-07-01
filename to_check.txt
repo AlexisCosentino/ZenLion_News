@@ -1,2 +1,2 @@
-2. Filtrer les news avec peu d'écarts et qui concerne la meme devise
-3. faire en sorte que les pips en dur fonctionnent pour toutes les paires
+_ Si pas de trend, alors passer a la paire suivante
+_ Enlever les emojis !

@@ -154,12 +154,12 @@ class TradingStrategy:
             self.initial_direction = trend
             self.initial_price = price
             self.hedge_active = False
-            logging.info("✅ Trade initial placé avec succès.")
+            logging.info("OK - Trade initial placé avec succès.")
 
             # Placer les pending orders directement après
             self.place_pending_grid_orders()
             self.place_pending_hedge_order()
             return True
         else:
-            logging.error("❌ Erreur lors du placement du trade initial.")
+            logging.error("FAIL - Erreur lors du placement du trade initial.")
             return False
