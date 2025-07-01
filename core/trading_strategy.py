@@ -140,7 +140,7 @@ class TradingStrategy:
     def execute_strategy(self):
         trend = self.detect_trend(self.symbol)
         ################################################ DEV ##################################################
-        trend="buy" 
+        #trend="buy" 
         ################################################ DEV ##################################################
         if not trend:
            return
