@@ -139,8 +139,7 @@ class TradingStrategy:
         logging.info(f"[HEDGE] Pending hedge order placé à {hedge_price:.5f}")
         
 
-    def execute_strategy(self):
-        trend = self.detect_trend(self.symbol)
+    def execute_strategy(self, trend):
         ################################################ DEV ##################################################
         #trend="buy" 
         ################################################ DEV ##################################################

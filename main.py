@@ -140,11 +140,11 @@ def main():
                         # Ici vous ajoutez votre logique de trading
                         if news['impact'] == 'High':
                             comment = news['title'][:10]
-                            symbol = symbolSelector.get_best_symbol(news['country'])
-                            if symbol is not None:
+                            symbol, trend = symbolSelector.get_best_symbol(news['country'])
+                            if symbol and trend:
                                 print(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
                                 tradingStrategy = TradingStrategy(symbol, comment)
-                                result = tradingStrategy.execute_strategy()
+                                result = tradingStrategy.execute_strategy(trend)
                                 if result:
                                     news_processed(news['title'], filename)
             #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
