@@ -51,18 +51,25 @@ def load_news_file(filename):
 
 def news_processed(title, filename):
     """Marque une news comme traitée en ajoutant un champ 'processed'"""
-    with open(filename, 'r') as f:
+    with open(filename, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
+
+    updated = False
+
     for news in data:
-            if news.get('title') == title:
-                news['processed'] = {
-                    'status': True,
-                    'timestamp': datetime.now(timezone.utc)  # Ajoute la date/heure
-                }
-                break
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=4)
+        if news.get('title') == title:
+            news['processed'] = {
+                'status': True,
+                'timestamp': datetime.now(timezone.utc).isoformat()
+            }
+            updated = True
+            break
+
+    if updated:
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
+    else:
+        print(f"[WARN] Titre '{title}' non trouvé dans le fichier '{filename}'")
     
     
 
