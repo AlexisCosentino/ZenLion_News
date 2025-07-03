@@ -51,7 +51,7 @@ class TradingStrategy:
         return float(np.max(highs) - np.min(lows))
 
 
-    def calculate_sl_tp(self, direction, volatility_multiplier=1.5, tp_ratio=2):
+    def calculate_sl_tp(self, direction, volatility_multiplier=1, tp_ratio=1.2):
         """
         Calcule les prix de SL et TP basés sur la volatilité récente.
         
@@ -82,7 +82,7 @@ class TradingStrategy:
         return (sl_price, tp_price, entry_price)
     
 
-    def calculate_sl_tp_from_price(self, direction, entry_price, volatility_multiplier=1.5, tp_ratio=2):
+    def calculate_sl_tp_from_price(self, direction, entry_price, volatility_multiplier=1, tp_ratio=1.2):
         """
         Calcule les SL/TP à partir d’un prix donné, plutôt que du prix marché.
         """
