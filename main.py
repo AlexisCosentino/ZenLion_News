@@ -119,7 +119,7 @@ def main():
         while True:
             # Trade uniquement les jours de semaine
             now = datetime.now(timezone.utc)
-            if now.weekday != 5 or now.weekday != 6:
+            if now.weekday() not in [5, 6]:
                 # 1. Charger le fichier de la semaine
                 filename = get_forex_week_filename()
                 filename = f"weekly_news_json/{filename}"
