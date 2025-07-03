@@ -17,8 +17,8 @@ class TradingStrategy:
         self.initial_price = None
         self.hedge_active = False
         self.grid_trades_done = []
-        self.grid_levels= [20, 40, 60]  # Pips entre chaque grid
-        self.max_drawdown = 50            # Pips avant hedge
+        self.grid_levels= []  # Pips entre chaque grid
+        self.max_drawdown = None          # Pips avant hedge
 
 
 
@@ -188,10 +188,11 @@ class TradingStrategy:
         initial_trade = self.engine.place_order(self.symbol, trend, 0.01, sl, tp, self.comment)
 
         if initial_trade:
+            logging.info("OK - Trade initial placé avec succès.")
+            self.set_grid_and_hedge_pips_value()
             self.initial_direction = trend
             self.initial_price = price
             self.hedge_active = False
-            logging.info("OK - Trade initial placé avec succès.")
 
             # Placer les pending orders directement après
             self.place_pending_grid_orders()

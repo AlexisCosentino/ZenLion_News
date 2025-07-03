@@ -1,2 +1,2 @@
 _ Si pas de trend, alors passer a la paire suivante
-_ Enlever les emojis !
+_ Si j'ai une erreur lors du placement du trade, alors je reprends ma liste de symbol
