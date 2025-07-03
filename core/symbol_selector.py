@@ -70,7 +70,7 @@ class SymbolSelector:
                     continue
 
                 # Tout est bon, on retourne ce symbole et sa trend
-                logging.info(f"[{country}] Symbole sélectionné : {symbol}")
+                logging.info(f"[{country}] Symbole sélectionné : {symbol}, trend : {trend}")
                 return symbol, trend
 
             # Aucun symbole n’a satisfait les conditions

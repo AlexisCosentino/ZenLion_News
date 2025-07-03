@@ -49,6 +49,14 @@ class TradingStrategy:
         highs = rates['high']
         lows = rates['low']
         return float(np.max(highs) - np.min(lows))
+    
+
+    def get_minimum_distance(self, pip_size):
+        symbol_info = mt5.symbol_info(self.symbol)
+        if symbol_info is None:
+            logging.error(f"Erreur : symbol_info non trouvé pour {self.symbol}")
+            return (None, None, None)
+        return symbol_info.stops_level * pip_size
 
 
     def calculate_sl_tp(self, direction, volatility_multiplier=1, tp_ratio=1.2):
@@ -62,6 +70,9 @@ class TradingStrategy:
         """
         volatility = self.get_volatility(self.symbol)  # Volatilité en pips
         pip_size = self.get_pip_size(self.symbol)
+
+        #min_distance = self.get_minimum_distance(self.symbol, pip_size)
+
         volatility_in_pips = volatility / pip_size
         sl_pips = volatility_in_pips * volatility_multiplier
         tp_pips = sl_pips * tp_ratio
@@ -188,4 +199,5 @@ class TradingStrategy:
             return True
         else:
             logging.error("FAIL - Erreur lors du placement du trade initial.")
+            logging.warning(f"SL: {sl}, TP: {tp}, Price: {price}")
             return False
