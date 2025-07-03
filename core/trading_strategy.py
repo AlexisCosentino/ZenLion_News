@@ -137,6 +137,33 @@ class TradingStrategy:
 
         self.engine.place_pending_order(self.symbol, direction, 0.01, sl, tp, "hedge", hedge_price, self.initial_price)
         logging.info(f"[HEDGE] Pending hedge order placé à {hedge_price:.5f}")
+
+
+    def set_grid_and_hedge_pips_value(self):
+        base_volatility = self.get_volatility(self.symbol)  # volatilité en unités prix
+        pip_size = self.get_pip_size(self.symbol)           # taille du pip en unités prix
+        
+        if base_volatility == 0 or pip_size == 0:
+            logging.warning("Volatilité ou pip_size invalide, valeurs fixes utilisées")
+            # Valeurs par défaut raisonnables
+            self.grid_levels = [20, 40, 60]
+            self.max_drawdown = 50
+            return
+
+        # Multiplicateurs à ajuster selon ta tolérance
+        grid_multiplier = 1.5
+        drawdown_multiplier = 4
+
+        # Convertir la volatilité en pips avant de multiplier, pour garder une échelle cohérente
+        base_volatility_pips = base_volatility / pip_size
+        
+        self.grid_levels = [
+            max(10, round(base_volatility_pips * grid_multiplier)),
+            max(20, round(base_volatility_pips * grid_multiplier * 2)),
+            max(30, round(base_volatility_pips * grid_multiplier * 3)),
+        ]
+        
+        self.max_drawdown = max(30, round(base_volatility_pips * drawdown_multiplier))
         
 
     def execute_strategy(self, trend):
