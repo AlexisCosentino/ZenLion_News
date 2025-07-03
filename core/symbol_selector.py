@@ -22,7 +22,7 @@ class SymbolSelector:
         positions = mt5.positions_get()
         if positions is None:
             return False
-        return any(pos["symbol"] == symbol for pos in positions)
+        return any(pos.symbol == symbol for pos in positions)
     
 
     def detect_trend(self, symbol, timeframe=mt5.TIMEFRAME_M1, lookback=3):
