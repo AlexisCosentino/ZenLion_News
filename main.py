@@ -117,51 +117,55 @@ def main():
 
     try:
         while True:
-            # Trade uniquement les jours de semaine
-            now = datetime.now(timezone.utc)
-            if now.weekday() not in [5, 6]:
-                # 1. Charger le fichier de la semaine
-                filename = get_forex_week_filename()
-                filename = f"weekly_news_json/{filename}"
-                if not os.path.exists(filename):
-                    logging.error(f"Fichier non trouvé: {filename}")
-                    continue
-                
-                news_data = load_news_file(filename)
-                
-                # 2. Filtrer les news d'aujourd'hui
-                todays_news = get_todays_news(news_data)
-                logging.info(f"Found {len(todays_news)} news today")
+            try:
+                # Trade uniquement les jours de semaine
+                now = datetime.now(timezone.utc)
+                if now.weekday() not in [5, 6]:
+                    # 1. Charger le fichier de la semaine
+                    filename = get_forex_week_filename()
+                    filename = f"weekly_news_json/{filename}"
+                    if not os.path.exists(filename):
+                        logging.error(f"Fichier non trouvé: {filename}")
+                        continue
+                    
+                    news_data = load_news_file(filename)
+                    
+                    # 2. Filtrer les news d'aujourd'hui
+                    todays_news = get_todays_news(news_data)
+                    logging.info(f"Found {len(todays_news)} news today")
 
-                # mock_data(todays_news)
-                
-                # 3. Vérifier les news à traiter
-                for news in todays_news:
-                    if should_trigger(news):
-                        logging.info(f"\n=== NEWS TRIGGER ===")
-                        logging.info(f"Title: {news['title']}")
-                        logging.info(f"Time (UTC): {news['date_utc']}")
-                        logging.info(f"Country: {news['country']}")
-                        logging.info(f"Impact: {news.get('impact', 'N/A')}")
-                        
-                        # Ici vous ajoutez votre logique de trading
-                        if news['impact'] == 'High':
-                            comment = news['title'][:10]
-                            symbol, trend = symbolSelector.get_best_symbol(news['country'])
-                            if symbol and trend:
-                                print(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
-                                tradingStrategy = TradingStrategy(symbol, comment)
-                                result = tradingStrategy.execute_strategy(trend)
-                                if result:
-                                    news_processed(news['title'], filename)
-            #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
-            if now.weekday == 6 and now.hour == 20 and now.minute == 30:
-                get_forex_calendar()
-            tradingEngine.close_positions_after_45min()
-            time.sleep(60)
+                    # mock_data(todays_news)
+                    
+                    # 3. Vérifier les news à traiter
+                    for news in todays_news:
+                        if should_trigger(news):
+                            logging.info(f"\n=== NEWS TRIGGER ===")
+                            logging.info(f"Title: {news['title']}")
+                            logging.info(f"Time (UTC): {news['date_utc']}")
+                            logging.info(f"Country: {news['country']}")
+                            logging.info(f"Impact: {news.get('impact', 'N/A')}")
+                            
+                            # Ici vous ajoutez votre logique de trading
+                            if news['impact'] == 'High':
+                                comment = news['title'][:10]
+                                symbol, trend = symbolSelector.get_best_symbol(news['country'])
+                                if symbol and trend:
+                                    print(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
+                                    tradingStrategy = TradingStrategy(symbol, comment)
+                                    result = tradingStrategy.execute_strategy(trend)
+                                    if result:
+                                        news_processed(news['title'], filename)
+                #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
+                if now.weekday() == 6 and now.hour == 20 and now.minute == 30:
+                    get_forex_calendar()
+                    logging.info(">>> Téléchargement du calendrier Forex hebdo")
+                    tim.sleep(90)
 
-                
-                
+                tradingEngine.close_positions_after_45min()
+                time.sleep(60)
+            except Exception as e:
+                logging.exception("Une erreur s'est produite dans la boucle principale.")
+                time.sleep(60)
     except Exception as e:
         logging.error(f"Error: {e}")
 

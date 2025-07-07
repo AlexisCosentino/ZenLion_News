@@ -1,0 +1,15 @@
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                                                    Title                                                                     | Country | Impact |         Date UTC          |
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                                        Cash Rate | RBA Rate Statement                                                        |   AUD   |  High  | 2025-07-08T04:30:00+00:00 |
+|                                                             RBA Press Conference                                                             |   AUD   |  High  | 2025-07-08T05:30:00+00:00 |
+|                                     Official Cash Rate | RBNZ Rate Statement | RBNZ Statement of Intent                                      |   NZD   |  High  | 2025-07-09T02:03:00+00:00 |
+|                                     BOE Financial Stability Report | FPC Meeting Minutes | FPC Statement                                     |   GBP   |  High  | 2025-07-09T09:30:00+00:00 |
+|                                                             FOMC Meeting Minutes                                                             |   USD   |  High  | 2025-07-09T18:00:00+00:00 |
+|                                                             Unemployment Claims                                                              |   USD   |  High  | 2025-07-10T12:30:00+00:00 |
+|                                                          FOMC Member Musalem Speaks                                                          |   USD   |  High  | 2025-07-10T13:00:00+00:00 |
+|                                                          FOMC Member Waller Speaks                                                           |   USD   |  High  | 2025-07-10T17:15:00+00:00 |
+|                                                           FOMC Member Daly Speaks                                                            |   USD   |  High  | 2025-07-10T18:30:00+00:00 |
+| GDP m/m | Construction Output m/m | Goods Trade Balance | Index of Services 3m/3m | Industrial Production m/m | Manufacturing Production m/m |   GBP   |  High  | 2025-07-11T06:00:00+00:00 |
+|                                         Employment Change | Unemployment Rate | Building Permits m/m                                         |   CAD   |  High  | 2025-07-11T12:30:00+00:00 |
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+

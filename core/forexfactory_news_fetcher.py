@@ -203,3 +203,8 @@ def save_pretty_news_table(filename_json):
         f.write(pretty_table)
 
     logging.info(f"OK - Tableau sauvegardé dans : {output_txt}")
+    
+    
+if __name__ == "__main__":
+    # Code à exécuter uniquement si le fichier est lancé directement
+    get_forex_calendar()
