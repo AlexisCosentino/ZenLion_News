@@ -5,6 +5,7 @@ import time
 import pytz
 from core.forexfactory_news_fetcher import get_forex_week_filename, get_forex_calendar
 from core.trading_strategy import TradingStrategy
+from core.trading_strategy_sandwich import TradingStrategySandwich
 from core.symbol_selector import SymbolSelector
 from core.trading_engine import TradingEngine
 from core.mt5_client import MT5Client
@@ -69,7 +70,7 @@ def news_processed(title, filename):
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=4, ensure_ascii=False)
     else:
-        print(f"[WARN] Titre '{title}' non trouvé dans le fichier '{filename}'")
+        logging.warning(f"[WARN] Titre '{title}' non trouvé dans le fichier '{filename}'")
     
     
 
@@ -134,7 +135,7 @@ def main():
                     todays_news = get_todays_news(news_data)
                     logging.info(f"Found {len(todays_news)} news today")
 
-                    # mock_data(todays_news)
+                    mock_data(todays_news)
                     
                     # 3. Vérifier les news à traiter
                     for news in todays_news:
@@ -150,11 +151,22 @@ def main():
                                 comment = news['title'][:10]
                                 symbol, trend = symbolSelector.get_best_symbol(news['country'])
                                 if symbol and trend:
-                                    print(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
+                                    logging.info(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
                                     tradingStrategy = TradingStrategy(symbol, comment)
                                     result = tradingStrategy.execute_strategy(trend)
                                     if result:
                                         news_processed(news['title'], filename)
+
+
+                            #launch sandwich strategy
+                            symbol = symbolSelector.get_symbol_from_news_currency(news['country'])
+                            if symbol:
+                                logging.info(f">>> Executing Sandwich strategy --> {symbol}")
+                                tradingStrategySandwich = TradingStrategySandwich(symbol, "sandwich")
+                                result = tradingStrategySandwich.execute_strategy()
+                            else:
+                                logging.warning(f"No symbol found for country: {news['country']}")
+
                 #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
                 if now.weekday() == 6 and now.hour == 20 and now.minute == 30:
                     get_forex_calendar()

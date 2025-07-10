@@ -80,3 +80,22 @@ class SymbolSelector:
         else:
             logging.warning(f'{country} pas supporté par ZenLion !')
             return None
+        
+
+    def get_symbol_from_news_currency(self, news_currency):
+        mapping = {
+            'USD': 'EURUSD',
+            'EUR': 'EURUSD',
+            'GBP': 'GBPUSD',
+            'JPY': 'USDJPY',
+            'CHF': 'USDCHF',
+            'AUD': 'AUDUSD',
+            'CAD': 'USDCAD',
+            'NZD': 'NZDUSD',
+            'CNY': 'USDCNH',  # souvent nommée comme ça chez les brokers
+        }
+        
+        symbol = mapping.get(news_currency.upper())
+        if symbol is None:
+            raise ValueError(f"Devise non supportée : {news_currency}")
+        return symbol

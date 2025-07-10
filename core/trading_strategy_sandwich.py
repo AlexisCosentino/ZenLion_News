@@ -95,7 +95,7 @@ class TradingStrategySandwich:
         ################################################ DEV ##################################################
         #trend="buy" 
         ################################################ DEV ##################################################
-        high, low = self.get_high_and_low(self.symbol)
+        high, low = self.get_high_and_low()
 
         tick = mt5.symbol_info_tick(self.symbol)
         if tick is None:
@@ -103,8 +103,8 @@ class TradingStrategySandwich:
             return (None, None, None)
 
 
-        sl_high, tp_high, price_high = self.calculate_sl_tp_from_price("buy", high)
-        sl_low, tp_low, price_low = self.calculate_sl_tp_from_price("sell", low)
+        sl_high, tp_high = self.calculate_sl_tp_from_price("buy", high)
+        sl_low, tp_low = self.calculate_sl_tp_from_price("sell", low)
 
 
         low_trade = self.engine.place_pending_order(self.symbol, "sell", 0.01, sl_low, tp_low, f"{self.comment}-Low", low, tick.bid)
@@ -114,11 +114,11 @@ class TradingStrategySandwich:
             logging.info("OK - Low Trade placé avec succès.")
         else:
             logging.error("FAIL - Erreur lors du placement du low trade.")
-            logging.warning(f"SL: {sl_low}, TP: {tp_low}, Price: {price_low}")
+            logging.warning(f"SL: {sl_low}, TP: {tp_low}, Price: {tick.bid}")
         
         if high_trade:
             logging.info("OK - High Trade placé avec succès.")
         else:
             logging.error("FAIL - Erreur lors du placement du high trade.")
-            logging.warning(f"SL: {sl_high}, TP: {tp_high}, Price: {price_high}")
+            logging.warning(f"SL: {sl_high}, TP: {tp_high}, Price: {tick.ask}")
         return low_trade, high_trade
