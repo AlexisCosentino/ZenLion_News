@@ -135,7 +135,7 @@ def main():
                     todays_news = get_todays_news(news_data)
                     logging.info(f"Found {len(todays_news)} news today")
 
-                    mock_data(todays_news)
+                    # mock_data(todays_news)
                     
                     # 3. Vérifier les news à traiter
                     for news in todays_news:
