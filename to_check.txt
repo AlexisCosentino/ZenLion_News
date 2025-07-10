@@ -1,2 +1,10 @@
 _ Si pas de trend, alors passer a la paire suivante
 _ Si j'ai une erreur lors du placement du trade, alors je reprends ma liste de symbol
+
+
+Sandwich = 5min après news, reperer le plus haut et le plus bas pendant ces 5mins, mettre un buy stop 3 pips au dessus du plus haut
+            et un sell stop 3 pips en dessous du plus bas. En fonction du marché, un des deux se déclenchera
+            SL (Stop Loss) : environ 10 à 15 pips derrière ton point d'entrée 
+            TP (Take Profit) : environ 20 à 30 pips plus loin (selon la paire et la volatilité)
+            1 ordre à la fois, l'autre s'annule / expiration 1h par trade max
+

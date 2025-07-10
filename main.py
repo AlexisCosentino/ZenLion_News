@@ -159,7 +159,7 @@ def main():
                 if now.weekday() == 6 and now.hour == 20 and now.minute == 30:
                     get_forex_calendar()
                     logging.info(">>> Téléchargement du calendrier Forex hebdo")
-                    tim.sleep(90)
+                    time.sleep(90)
 
                 tradingEngine.close_positions_after_45min()
                 time.sleep(60)
