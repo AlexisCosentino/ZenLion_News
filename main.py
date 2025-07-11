@@ -157,7 +157,7 @@ def main():
                                     if result:
                                         news_processed(news['title'], filename)
 
-
+                        if should_trigger(news, minutes=-1):
                             #launch sandwich strategy
                             symbol = symbolSelector.get_symbol_from_news_currency(news['country'])
                             if symbol:
