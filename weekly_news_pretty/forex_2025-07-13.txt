@@ -1,0 +1,27 @@
++----------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                                              Title                                                               | Country | Impact |         Date UTC          |
++----------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+| GDP q/y | Industrial Production y/y | Retail Sales y/y | Fixed Asset Investment ytd/y | NBS Press Conference | Unemployment Rate |   CNY   |  High  | 2025-07-15T02:00:00+00:00 |
+|                        German ZEW Economic Sentiment | Industrial Production m/m | ZEW Economic Sentiment                        |   EUR   |  High  | 2025-07-15T09:00:00+00:00 |
+|               CPI m/m | Median CPI y/y | Trimmed CPI y/y | Common CPI y/y | Core CPI m/m | Manufacturing Sales m/m               |   CAD   |  High  | 2025-07-15T12:30:00+00:00 |
+|                                                 Core CPI m/m | CPI m/m | CPI y/y                                                 |   USD   |  High  | 2025-07-15T12:30:00+00:00 |
+|                                                    FOMC Member Bowman Speaks                                                     |   USD   |  High  | 2025-07-15T13:15:00+00:00 |
+|                                                     FOMC Member Barr Speaks                                                      |   USD   |  High  | 2025-07-15T16:45:00+00:00 |
+|                                                    FOMC Member Barkin Speaks                                                     |   USD   |  High  | 2025-07-15T17:00:00+00:00 |
+|                                                    FOMC Member Collins Speaks                                                    |   USD   |  High  | 2025-07-15T18:45:00+00:00 |
+|                                                      BOE Gov Bailey Speaks                                                       |   GBP   |  High  | 2025-07-15T20:00:00+00:00 |
+|                                                     FOMC Member Logan Speaks                                                     |   USD   |  High  | 2025-07-15T23:45:00+00:00 |
+|                                                 CPI y/y | Core CPI y/y | RPI y/y                                                 |   GBP   |  High  | 2025-07-16T06:00:00+00:00 |
+|                                                    FOMC Member Barkin Speaks                                                     |   USD   |  High  | 2025-07-16T12:00:00+00:00 |
+|                                                      Core PPI m/m | PPI m/m                                                      |   USD   |  High  | 2025-07-16T12:30:00+00:00 |
+|                        Capacity Utilization Rate | FOMC Member Hammack Speaks | Industrial Production m/m                        |   USD   |  High  | 2025-07-16T13:15:00+00:00 |
+|                                                     FOMC Member Barr Speaks                                                      |   USD   |  High  | 2025-07-16T14:00:00+00:00 |
+|                                                   FOMC Member Williams Speaks                                                    |   USD   |  High  | 2025-07-16T22:30:00+00:00 |
+|                            Employment Change | Unemployment Rate | NAB Quarterly Business Confidence                             |   AUD   |  High  | 2025-07-17T01:30:00+00:00 |
+|                             Average Earnings Index 3m/y | Claimant Count Change | Unemployment Rate                              |   GBP   |  High  | 2025-07-17T06:00:00+00:00 |
+|                                  Core Retail Sales m/m | Retail Sales m/m | Unemployment Claims                                  |   USD   |  High  | 2025-07-17T12:30:00+00:00 |
+|                         Business Inventories m/m | FOMC Member Kugler Speaks | NAHB Housing Market Index                         |   USD   |  High  | 2025-07-17T14:00:00+00:00 |
+|                                                     FOMC Member Daly Speaks                                                      |   USD   |  High  | 2025-07-17T16:45:00+00:00 |
+|                                                     FOMC Member Cook Speaks                                                      |   USD   |  High  | 2025-07-17T17:30:00+00:00 |
+|                                                    FOMC Member Waller Speaks                                                     |   USD   |  High  | 2025-07-17T22:30:00+00:00 |
++----------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+

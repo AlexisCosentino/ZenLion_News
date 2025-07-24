@@ -1,101 +1,129 @@
 [
-  {
-    "title": "Cash Rate | RBA Rate Statement",
-    "country": "AUD",
-    "date": "2025-07-08T00:30:00-04:00",
-    "impact": "High",
-    "forecast": "3.60%",
-    "previous": "3.85%",
-    "date_utc": "2025-07-08T04:30:00+00:00"
-  },
-  {
-    "title": "RBA Press Conference",
-    "country": "AUD",
-    "date": "2025-07-08T01:30:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "",
-    "date_utc": "2025-07-08T05:30:00+00:00"
-  },
-  {
-    "title": "Employment Change | Unemployment Rate | Building Permits m/m",
-    "country": "CAD",
-    "date": "2025-07-11T08:30:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "8.8K",
-    "date_utc": "2025-07-11T12:30:00+00:00"
-  },
-  {
-    "title": "BOE Financial Stability Report | FPC Meeting Minutes | FPC Statement",
-    "country": "GBP",
-    "date": "2025-07-09T05:30:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "",
-    "date_utc": "2025-07-09T09:30:00+00:00"
-  },
-  {
-    "title": "GDP m/m | Construction Output m/m | Goods Trade Balance | Index of Services 3m/3m | Industrial Production m/m | Manufacturing Production m/m",
-    "country": "GBP",
-    "date": "2025-07-11T02:00:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "-0.3%",
-    "date_utc": "2025-07-11T06:00:00+00:00"
-  },
-  {
-    "title": "Official Cash Rate | RBNZ Rate Statement | RBNZ Statement of Intent",
-    "country": "NZD",
-    "date": "2025-07-08T22:03:00-04:00",
-    "impact": "High",
-    "forecast": "3.25%",
-    "previous": "3.25%",
-    "date_utc": "2025-07-09T02:03:00+00:00"
-  },
-  {
-    "title": "FOMC Meeting Minutes",
-    "country": "USD",
-    "date": "2025-07-09T14:00:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "",
-    "date_utc": "2025-07-09T18:00:00+00:00"
-  },
-  {
-    "title": "Unemployment Claims",
-    "country": "USD",
-    "date": "2025-07-10T08:30:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "233K",
-    "date_utc": "2025-07-10T12:30:00+00:00"
-  },
-  {
-    "title": "FOMC Member Musalem Speaks",
-    "country": "USD",
-    "date": "2025-07-10T09:00:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "",
-    "date_utc": "2025-07-10T13:00:00+00:00"
-  },
-  {
-    "title": "FOMC Member Waller Speaks",
-    "country": "USD",
-    "date": "2025-07-10T13:15:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "",
-    "date_utc": "2025-07-10T17:15:00+00:00"
-  },
-  {
-    "title": "FOMC Member Daly Speaks",
-    "country": "USD",
-    "date": "2025-07-10T14:30:00-04:00",
-    "impact": "High",
-    "forecast": "",
-    "previous": "",
-    "date_utc": "2025-07-10T18:30:00+00:00"
-  }
+    {
+        "title": "Cash Rate | RBA Rate Statement",
+        "country": "AUD",
+        "date": "2025-07-08T00:30:00-04:00",
+        "impact": "High",
+        "forecast": "3.60%",
+        "previous": "3.85%",
+        "date_utc": "2025-07-08T04:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-08T04:35:15.825714+00:00"
+        }
+    },
+    {
+        "title": "RBA Press Conference",
+        "country": "AUD",
+        "date": "2025-07-08T01:30:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-08T05:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-08T05:35:16.742291+00:00"
+        }
+    },
+    {
+        "title": "Employment Change | Unemployment Rate | Building Permits m/m",
+        "country": "CAD",
+        "date": "2025-07-11T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "8.8K",
+        "date_utc": "2025-07-11T12:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-11T12:35:30.842345+00:00"
+        }
+    },
+    {
+        "title": "BOE Financial Stability Report | FPC Meeting Minutes | FPC Statement",
+        "country": "GBP",
+        "date": "2025-07-09T05:30:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-09T09:30:00+00:00"
+    },
+    {
+        "title": "GDP m/m | Construction Output m/m | Goods Trade Balance | Index of Services 3m/3m | Industrial Production m/m | Manufacturing Production m/m",
+        "country": "GBP",
+        "date": "2025-07-11T02:00:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "-0.3%",
+        "date_utc": "2025-07-11T06:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-11T06:05:28.027140+00:00"
+        }
+    },
+    {
+        "title": "Official Cash Rate | RBNZ Rate Statement | RBNZ Statement of Intent",
+        "country": "NZD",
+        "date": "2025-07-08T22:03:00-04:00",
+        "impact": "High",
+        "forecast": "3.25%",
+        "previous": "3.25%",
+        "date_utc": "2025-07-09T02:03:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-09T02:08:29.037941+00:00"
+        }
+    },
+    {
+        "title": "FOMC Meeting Minutes",
+        "country": "USD",
+        "date": "2025-07-09T14:00:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-09T18:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-09T18:05:32.224636+00:00"
+        }
+    },
+    {
+        "title": "Unemployment Claims",
+        "country": "USD",
+        "date": "2025-07-10T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "233K",
+        "date_utc": "2025-07-10T12:30:00+00:00"
+    },
+    {
+        "title": "FOMC Member Musalem Speaks",
+        "country": "USD",
+        "date": "2025-07-10T09:00:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-10T13:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-10T13:05:51.893552+00:00"
+        }
+    },
+    {
+        "title": "FOMC Member Waller Speaks",
+        "country": "USD",
+        "date": "2025-07-10T13:15:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-10T17:15:00+00:00"
+    },
+    {
+        "title": "FOMC Member Daly Speaks",
+        "country": "USD",
+        "date": "2025-07-10T14:30:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-10T18:30:00+00:00"
+    }
 ]

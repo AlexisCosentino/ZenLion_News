@@ -1,0 +1,19 @@
++-----------------------------------------------------------------------+---------+--------+---------------------------+
+|                                 Title                                 | Country | Impact |         Date UTC          |
++-----------------------------------------------------------------------+---------+--------+---------------------------+
+|                         Upper House Elections                         |   JPY   |  High  | 2025-07-20T07:00:00+00:00 |
+|                                CPI q/q                                |   NZD   |  High  | 2025-07-20T22:45:00+00:00 |
+|                         BOE Gov Bailey Speaks                         |   GBP   |  High  | 2025-07-22T09:15:00+00:00 |
+|                        Fed Chair Powell Speaks                        |   USD   |  High  | 2025-07-22T12:30:00+00:00 |
+|                           BOJ Core CPI y/y                            |   JPY   |  High  | 2025-07-23T05:00:00+00:00 |
+|                        RBA Gov Bullock Speaks                         |   AUD   |  High  | 2025-07-24T03:05:00+00:00 |
+|      French Flash Manufacturing PMI | French Flash Services PMI       |   EUR   |  High  | 2025-07-24T07:15:00+00:00 |
+|      German Flash Manufacturing PMI | German Flash Services PMI       |   EUR   |  High  | 2025-07-24T07:30:00+00:00 |
+|             Flash Manufacturing PMI | Flash Services PMI              |   GBP   |  High  | 2025-07-24T08:30:00+00:00 |
+|           Main Refinancing Rate | Monetary Policy Statement           |   EUR   |  High  | 2025-07-24T12:15:00+00:00 |
+|                          Unemployment Claims                          |   USD   |  High  | 2025-07-24T12:30:00+00:00 |
+|                         ECB Press Conference                          |   EUR   |  High  | 2025-07-24T12:45:00+00:00 |
+|             Flash Manufacturing PMI | Flash Services PMI              |   USD   |  High  | 2025-07-24T13:45:00+00:00 |
+|                           Retail Sales m/m                            |   GBP   |  High  | 2025-07-25T06:00:00+00:00 |
+| German ifo Business Climate | M3 Money Supply y/y | Private Loans y/y |   EUR   |  High  | 2025-07-25T08:00:00+00:00 |
++-----------------------------------------------------------------------+---------+--------+---------------------------+
