@@ -5,6 +5,7 @@ import time
 import pytz
 from core.forexfactory_news_fetcher import get_forex_week_filename, get_forex_calendar
 from core.trading_strategy import TradingStrategy
+from core.trading_strategy_multi_timeframe import TradingStrategyMultiTimeframe
 from core.trading_strategy_sandwich import TradingStrategySandwich
 from core.symbol_selector import SymbolSelector
 from core.trading_engine import TradingEngine
@@ -148,11 +149,23 @@ def main():
                             
                             # Ici vous ajoutez votre logique de trading
                             if news['impact'] == 'High':
-                                comment = news['title'][:10]
-                                symbol, trend = symbolSelector.get_best_symbol(news['country'])
+                                
+                                #Stratégie de base
+                                # comment = news['title'][:10]
+                                # symbol, trend = symbolSelector.get_best_symbol(news['country'])
+                                # if symbol and trend:
+                                #     logging.info(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
+                                #     tradingStrategy = TradingStrategy(symbol, comment)
+                                #     result = tradingStrategy.execute_strategy(trend)
+                                #     if result:
+                                #         news_processed(news['title'], filename)
+                                
+                                #Stratégie multitimeframe
+                                comment = f'{news['title'][:10]}_MTF'
+                                symbol, trend = symbolSelector.get_best_symbol_multi_timeframe(news['country'])
                                 if symbol and trend:
                                     logging.info(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
-                                    tradingStrategy = TradingStrategy(symbol, comment)
+                                    tradingStrategy = TradingStrategyMultiTimeframe(symbol, comment)
                                     result = tradingStrategy.execute_strategy(trend)
                                     if result:
                                         news_processed(news['title'], filename)
