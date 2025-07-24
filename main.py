@@ -161,7 +161,7 @@ def main():
                                 #         news_processed(news['title'], filename)
                                 
                                 #Stratégie multitimeframe
-                                comment = f'{news['title'][:10]}_MTF'
+                                comment = f"{news['title'][:10]}_MTF"
                                 symbol, trend = symbolSelector.get_best_symbol_multi_timeframe(news['country'])
                                 if symbol and trend:
                                     logging.info(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")

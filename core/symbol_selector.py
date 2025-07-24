@@ -1,5 +1,6 @@
 import MetaTrader5 as mt5
 import pandas as pd
+import pandas_ta as ta
 import logging
 
 class SymbolSelector:
