@@ -114,6 +114,8 @@ def mock_data(todays_news):
 
 def test_before_prod():
     m15_data = pd.DataFrame(mt5.copy_rates_from_pos("EURUSD", mt5.TIMEFRAME_M15, 0, 100))
+    m15_data['time'] = pd.to_datetime(m15_data['time'], unit='s', utc=True )
+    m15_data['time'] = m15_data['time']- timedelta(hours=3)
     logging.info(f'derniere bougie : {m15_data.iloc[-1]}')
     logging.info(f'heure actuel utc : {datetime.now(timezone.utc)}')
     return
@@ -145,7 +147,7 @@ def main():
                     logging.info(f"Found {len(todays_news)} news today")
 
                     # mock_data(todays_news)
-                    # test_before_prod()
+                    test_before_prod()
                     
                     # 3. Vérifier les news à traiter
                     for news in todays_news:
