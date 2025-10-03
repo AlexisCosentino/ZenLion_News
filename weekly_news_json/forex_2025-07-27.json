@@ -1,0 +1,209 @@
+[
+    {
+        "title": "CPI q/q | CPI y/y | Trimmed Mean CPI q/q",
+        "country": "AUD",
+        "date": "2025-07-29T21:30:00-04:00",
+        "impact": "High",
+        "forecast": "0.8%",
+        "previous": "0.9%",
+        "date_utc": "2025-07-30T01:30:00+00:00"
+    },
+    {
+        "title": "Retail Sales m/m | Building Approvals m/m | Import Prices q/q",
+        "country": "AUD",
+        "date": "2025-07-30T21:30:00-04:00",
+        "impact": "High",
+        "forecast": "0.4%",
+        "previous": "0.2%",
+        "date_utc": "2025-07-31T01:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-31T01:35:39.066527+00:00"
+        }
+    },
+    {
+        "title": "BOC Monetary Policy Report | BOC Rate Statement | Overnight Rate",
+        "country": "CAD",
+        "date": "2025-07-30T09:45:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-30T13:45:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-30T13:50:30.083233+00:00"
+        }
+    },
+    {
+        "title": "BOC Press Conference",
+        "country": "CAD",
+        "date": "2025-07-30T10:30:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-30T14:30:00+00:00"
+    },
+    {
+        "title": "GDP m/m",
+        "country": "CAD",
+        "date": "2025-07-31T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "-0.1%",
+        "previous": "-0.1%",
+        "date_utc": "2025-07-31T12:30:00+00:00"
+    },
+    {
+        "title": "Manufacturing PMI",
+        "country": "CNY",
+        "date": "2025-07-30T21:30:00-04:00",
+        "impact": "High",
+        "forecast": "49.7",
+        "previous": "49.7",
+        "date_utc": "2025-07-31T01:30:00+00:00"
+    },
+    {
+        "title": "Italian Manufacturing PMI | French Final Manufacturing PMI | German Final Manufacturing PMI",
+        "country": "EUR",
+        "date": "2025-08-01T03:55:00-04:00",
+        "impact": "High",
+        "forecast": "48.7",
+        "previous": "48.4",
+        "date_utc": "2025-08-01T07:55:00+00:00"
+    },
+    {
+        "title": "M4 Money Supply m/m | Mortgage Approvals | Net Lending to Individuals m/m",
+        "country": "GBP",
+        "date": "2025-07-29T04:30:00-04:00",
+        "impact": "High",
+        "forecast": "0.3%",
+        "previous": "0.2%",
+        "date_utc": "2025-07-29T08:30:00+00:00"
+    },
+    {
+        "title": "BOJ Policy Rate | Monetary Policy Statement",
+        "country": "JPY",
+        "date": "2025-07-30T22:30:00-04:00",
+        "impact": "High",
+        "forecast": "<0.50%",
+        "previous": "<0.50%",
+        "date_utc": "2025-07-31T02:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-31T02:35:40.704401+00:00"
+        }
+    },
+    {
+        "title": "BOJ Outlook Report",
+        "country": "JPY",
+        "date": "2025-07-30T22:48:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-31T02:48:00+00:00"
+    },
+    {
+        "title": "BOJ Press Conference",
+        "country": "JPY",
+        "date": "2025-07-31T01:30:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-31T05:30:00+00:00"
+    },
+    {
+        "title": "JOLTS Job Openings",
+        "country": "USD",
+        "date": "2025-07-29T10:00:00-04:00",
+        "impact": "High",
+        "forecast": "7.49M",
+        "previous": "7.77M",
+        "date_utc": "2025-07-29T14:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-29T14:05:12.631987+00:00"
+        }
+    },
+    {
+        "title": "ADP Non-Farm Employment Change",
+        "country": "USD",
+        "date": "2025-07-30T08:15:00-04:00",
+        "impact": "High",
+        "forecast": "82K",
+        "previous": "-33K",
+        "date_utc": "2025-07-30T12:15:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-30T12:20:28.406825+00:00"
+        }
+    },
+    {
+        "title": "Advance GDP q/q",
+        "country": "USD",
+        "date": "2025-07-30T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "2.4%",
+        "previous": "-0.3%",
+        "date_utc": "2025-07-30T12:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-30T12:35:29.066337+00:00"
+        }
+    },
+    {
+        "title": "Federal Funds Rate | FOMC Statement",
+        "country": "USD",
+        "date": "2025-07-30T14:00:00-04:00",
+        "impact": "High",
+        "forecast": "4.50%",
+        "previous": "4.50%",
+        "date_utc": "2025-07-30T18:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-30T18:05:33.950848+00:00"
+        }
+    },
+    {
+        "title": "FOMC Press Conference",
+        "country": "USD",
+        "date": "2025-07-30T14:30:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-07-30T18:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-30T18:35:34.301288+00:00"
+        }
+    },
+    {
+        "title": "Core PCE Price Index m/m | Employment Cost Index q/q | Unemployment Claims",
+        "country": "USD",
+        "date": "2025-07-31T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "0.3%",
+        "previous": "0.2%",
+        "date_utc": "2025-07-31T12:30:00+00:00"
+    },
+    {
+        "title": "Average Hourly Earnings m/m | Non-Farm Employment Change | Unemployment Rate",
+        "country": "USD",
+        "date": "2025-08-01T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "0.3%",
+        "previous": "0.2%",
+        "date_utc": "2025-08-01T12:30:00+00:00"
+    },
+    {
+        "title": "ISM Manufacturing PMI | ISM Manufacturing Prices | Revised UoM Consumer Sentiment",
+        "country": "USD",
+        "date": "2025-08-01T10:00:00-04:00",
+        "impact": "High",
+        "forecast": "49.5",
+        "previous": "49.0",
+        "date_utc": "2025-08-01T14:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-08-01T14:05:08.020352+00:00"
+        }
+    }
+]

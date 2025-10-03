@@ -1,0 +1,17 @@
++----------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                                  Title                                                   | Country | Impact |         Date UTC          |
++----------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                                 CPI m/m                                                  |   CHF   |  High  | 2025-08-04T06:30:00+00:00 |
+|               Italian Services PMI | French Final Services PMI | German Final Services PMI               |   EUR   |  High  | 2025-08-05T07:55:00+00:00 |
+|                                             ISM Services PMI                                             |   USD   |  High  | 2025-08-05T14:00:00+00:00 |
+|                     Employment Change q/q | Unemployment Rate | Labor Cost Index q/q                     |   NZD   |  High  | 2025-08-05T22:45:00+00:00 |
+|                                         FOMC Member Daly Speaks                                          |   USD   |  High  | 2025-08-06T16:45:00+00:00 |
+|                           FOMC Member Collins Speaks | FOMC Member Cook Speaks                           |   USD   |  High  | 2025-08-06T18:00:00+00:00 |
+|                                          ECB Economic Bulletin                                           |   EUR   |  High  | 2025-08-07T08:00:00+00:00 |
+| BOE Monetary Policy Report | Monetary Policy Summary | MPC Official Bank Rate Votes | Official Bank Rate |   GBP   |  High  | 2025-08-07T11:00:00+00:00 |
+|           Unemployment Claims | Prelim Nonfarm Productivity q/q | Prelim Unit Labor Costs q/q            |   USD   |  High  | 2025-08-07T12:30:00+00:00 |
+|                                        FOMC Member Bostic Speaks                                         |   USD   |  High  | 2025-08-07T14:00:00+00:00 |
+|                       Bank Lending y/y | BOJ Summary of Opinions | Current Account                       |   JPY   |  High  | 2025-08-07T23:50:00+00:00 |
+|                                  Employment Change | Unemployment Rate                                   |   CAD   |  High  | 2025-08-08T12:30:00+00:00 |
+|                                        FOMC Member Musalem Speaks                                        |   USD   |  High  | 2025-08-08T14:20:00+00:00 |
++----------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+

@@ -1,0 +1,23 @@
++---------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                            Title                                            | Country | Impact |         Date UTC          |
++---------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|     ANZ Job Advertisements m/m | Building Approvals m/m | Company Operating Profits q/q     |   AUD   |  High  | 2025-09-01T01:30:00+00:00 |
+| Italian Manufacturing PMI | French Final Manufacturing PMI | German Final Manufacturing PMI |   EUR   |  High  | 2025-09-01T07:55:00+00:00 |
+|             Final Manufacturing PMI | M4 Money Supply m/m | Mortgage Approvals              |   GBP   |  High  | 2025-09-01T08:30:00+00:00 |
+|        ISM Manufacturing PMI | ISM Manufacturing Prices | Construction Spending m/m         |   USD   |  High  | 2025-09-02T14:00:00+00:00 |
+|                                           GDP q/q                                           |   AUD   |  High  | 2025-09-03T01:30:00+00:00 |
+|                                ECB President Lagarde Speaks                                 |   EUR   |  High  | 2025-09-03T07:30:00+00:00 |
+|        Italian Services PMI | French Final Services PMI | German Final Services PMI         |   EUR   |  High  | 2025-09-03T07:55:00+00:00 |
+|                                   RBA Gov Bullock Speaks                                    |   AUD   |  High  | 2025-09-03T08:00:00+00:00 |
+|                                 FOMC Member Musalem Speaks                                  |   USD   |  High  | 2025-09-03T13:00:00+00:00 |
+|                                     JOLTS Job Openings                                      |   USD   |  High  | 2025-09-03T14:00:00+00:00 |
+|                                 FOMC Member Kashkari Speaks                                 |   USD   |  High  | 2025-09-03T17:30:00+00:00 |
+|                                           CPI m/m                                           |   CHF   |  High  | 2025-09-04T06:30:00+00:00 |
+|                               ADP Non-Farm Employment Change                                |   USD   |  High  | 2025-09-04T12:15:00+00:00 |
+|    Unemployment Claims | Revised Nonfarm Productivity q/q | Revised Unit Labor Costs q/q    |   USD   |  High  | 2025-09-04T12:30:00+00:00 |
+|                                      ISM Services PMI                                       |   USD   |  High  | 2025-09-04T14:00:00+00:00 |
+|                                 FOMC Member Williams Speaks                                 |   USD   |  High  | 2025-09-04T16:05:00+00:00 |
+|                                 FOMC Member Goolsbee Speaks                                 |   USD   |  High  | 2025-09-04T23:00:00+00:00 |
+|                            Employment Change | Unemployment Rate                            |   CAD   |  High  | 2025-09-05T12:30:00+00:00 |
+|        Average Hourly Earnings m/m | Non-Farm Employment Change | Unemployment Rate         |   USD   |  High  | 2025-09-05T12:30:00+00:00 |
++---------------------------------------------------------------------------------------------+---------+--------+---------------------------+

@@ -1,0 +1,128 @@
+[
+  {
+    "title": "CPI y/y",
+    "country": "AUD",
+    "date": "2025-08-26T21:30:00-04:00",
+    "impact": "High",
+    "forecast": "2.3%",
+    "previous": "1.9%",
+    "date_utc": "2025-08-27T01:30:00+00:00"
+  },
+  {
+    "title": "BOC Gov Macklem Speaks",
+    "country": "CAD",
+    "date": "2025-08-26T14:30:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-08-26T18:30:00+00:00"
+  },
+  {
+    "title": "GDP m/m",
+    "country": "CAD",
+    "date": "2025-08-29T08:30:00-04:00",
+    "impact": "High",
+    "forecast": "0.2%",
+    "previous": "-0.1%",
+    "date_utc": "2025-08-29T12:30:00+00:00"
+  },
+  {
+    "title": "Manufacturing PMI",
+    "country": "CNY",
+    "date": "2025-08-30T21:30:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "49.3",
+    "date_utc": "2025-08-31T01:30:00+00:00"
+  },
+  {
+    "title": "ECB Monetary Policy Meeting Accounts",
+    "country": "EUR",
+    "date": "2025-08-28T07:30:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-08-28T11:30:00+00:00"
+  },
+  {
+    "title": "French Consumer Spending m/m | French Final Private Payrolls q/q | French Prelim CPI m/m",
+    "country": "EUR",
+    "date": "2025-08-29T02:45:00-04:00",
+    "impact": "High",
+    "forecast": "-0.4%",
+    "previous": "0.6%",
+    "date_utc": "2025-08-29T06:45:00+00:00"
+  },
+  {
+    "title": "BOJ Core CPI y/y",
+    "country": "JPY",
+    "date": "2025-08-26T01:00:00-04:00",
+    "impact": "High",
+    "forecast": "2.4%",
+    "previous": "2.3%",
+    "date_utc": "2025-08-26T05:00:00+00:00"
+  },
+  {
+    "title": "FOMC Member Logan Speaks",
+    "country": "USD",
+    "date": "2025-08-25T15:15:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-08-25T19:15:00+00:00"
+  },
+  {
+    "title": "FOMC Member Williams Speaks",
+    "country": "USD",
+    "date": "2025-08-25T19:15:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-08-25T23:15:00+00:00"
+  },
+  {
+    "title": "Core Durable Goods Orders m/m | Durable Goods Orders m/m | FOMC Member Barkin Speaks",
+    "country": "USD",
+    "date": "2025-08-26T08:30:00-04:00",
+    "impact": "High",
+    "forecast": "0.3%",
+    "previous": "0.2%",
+    "date_utc": "2025-08-26T12:30:00+00:00"
+  },
+  {
+    "title": "FOMC Member Barkin Speaks",
+    "country": "USD",
+    "date": "2025-08-27T11:45:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-08-27T15:45:00+00:00"
+  },
+  {
+    "title": "Prelim GDP q/q | Unemployment Claims | Prelim GDP Price Index q/q",
+    "country": "USD",
+    "date": "2025-08-28T08:30:00-04:00",
+    "impact": "High",
+    "forecast": "3.1%",
+    "previous": "3.0%",
+    "date_utc": "2025-08-28T12:30:00+00:00"
+  },
+  {
+    "title": "FOMC Member Waller Speaks",
+    "country": "USD",
+    "date": "2025-08-28T18:00:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-08-28T22:00:00+00:00"
+  },
+  {
+    "title": "Core PCE Price Index m/m | Goods Trade Balance | Personal Income m/m",
+    "country": "USD",
+    "date": "2025-08-29T08:30:00-04:00",
+    "impact": "High",
+    "forecast": "0.3%",
+    "previous": "0.3%",
+    "date_utc": "2025-08-29T12:30:00+00:00"
+  }
+]

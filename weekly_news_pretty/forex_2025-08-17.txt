@@ -1,0 +1,21 @@
++---------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                   Title                                   | Country | Impact |         Date UTC          |
++---------------------------------------------------------------------------+---------+--------+---------------------------+
+|                CPI m/m | Median CPI y/y | Trimmed CPI y/y                 |   CAD   |  High  | 2025-08-19T12:30:00+00:00 |
+|                         FOMC Member Bowman Speaks                         |   USD   |  High  | 2025-08-19T18:10:00+00:00 |
+| Official Cash Rate | RBNZ Monetary Policy Statement | RBNZ Rate Statement |   NZD   |  High  | 2025-08-20T02:00:00+00:00 |
+|                           RBNZ Press Conference                           |   NZD   |  High  | 2025-08-20T03:00:00+00:00 |
+|                     CPI y/y | Core CPI y/y | RPI y/y                      |   GBP   |  High  | 2025-08-20T06:00:00+00:00 |
+|                         FOMC Member Waller Speaks                         |   USD   |  High  | 2025-08-20T15:00:00+00:00 |
+|                           FOMC Meeting Minutes                            |   USD   |  High  | 2025-08-20T18:00:00+00:00 |
+|                         FOMC Member Bostic Speaks                         |   USD   |  High  | 2025-08-20T19:00:00+00:00 |
+|        German Flash Manufacturing PMI | German Flash Services PMI         |   EUR   |  High  | 2025-08-21T07:30:00+00:00 |
+|               Flash Manufacturing PMI | Flash Services PMI                |   GBP   |  High  | 2025-08-21T08:30:00+00:00 |
+|                         FOMC Member Bostic Speaks                         |   USD   |  High  | 2025-08-21T11:30:00+00:00 |
+|                            Unemployment Claims                            |   USD   |  High  | 2025-08-21T12:30:00+00:00 |
+|               Flash Manufacturing PMI | Flash Services PMI                |   USD   |  High  | 2025-08-21T13:45:00+00:00 |
+|                          Fed Chair Powell Speaks                          |   USD   |  High  | 2025-08-22T14:00:00+00:00 |
+|                          Jackson Hole Symposium                           |   All   |  High  | 2025-08-22T16:15:00+00:00 |
+|                       ECB President Lagarde Speaks                        |   EUR   |  High  | 2025-08-23T16:25:00+00:00 |
+|                           BOE Gov Bailey Speaks                           |   GBP   |  High  | 2025-08-23T16:25:00+00:00 |
++---------------------------------------------------------------------------+---------+--------+---------------------------+

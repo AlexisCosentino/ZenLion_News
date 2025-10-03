@@ -11,7 +11,7 @@ import logging
 class TradingStrategyMultiTimeframeV2:
     def __init__(self, comment, news_country):
         self.engine = TradingEngine()
-        self.symbol
+        self.symbol = None
         self.news_country = news_country
         self.news_data = None
         self.comment = comment

@@ -1,0 +1,35 @@
++---------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                            Title                                            | Country | Impact |         Date UTC          |
++---------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|          M4 Money Supply m/m | Mortgage Approvals | Net Lending to Individuals m/m          |   GBP   |  High  | 2025-09-29T08:30:00+00:00 |
+|                                  FOMC Member Waller Speaks                                  |   USD   |  High  | 2025-09-29T11:30:00+00:00 |
+|                                 FOMC Member Hammack Speaks                                  |   USD   |  High  | 2025-09-29T12:00:00+00:00 |
+|                  FOMC Member Musalem Speaks | FOMC Member Williams Speaks                   |   USD   |  High  | 2025-09-29T17:30:00+00:00 |
+|                                  FOMC Member Bostic Speaks                                  |   USD   |  High  | 2025-09-29T22:00:00+00:00 |
+|        BOJ Summary of Opinions | Prelim Industrial Production m/m | Retail Sales y/y        |   JPY   |  High  | 2025-09-29T23:50:00+00:00 |
+|                                      Manufacturing PMI                                      |   CNY   |  High  | 2025-09-30T01:30:00+00:00 |
+|                               Cash Rate | RBA Rate Statement                                |   AUD   |  High  | 2025-09-30T04:30:00+00:00 |
+|                                    RBA Press Conference                                     |   AUD   |  High  | 2025-09-30T05:30:00+00:00 |
+|              Current Account | Final GDP q/q | Revised Business Investment q/q              |   GBP   |  High  | 2025-09-30T06:00:00+00:00 |
+|                                FOMC Member Jefferson Speaks                                 |   USD   |  High  | 2025-09-30T10:00:00+00:00 |
+|                                ECB President Lagarde Speaks                                 |   EUR   |  High  | 2025-09-30T12:50:00+00:00 |
+|             FOMC Member Collins Speaks | HPI m/m | S&P/CS Composite-20 HPI y/y              |   USD   |  High  | 2025-09-30T13:00:00+00:00 |
+|                                     JOLTS Job Openings                                      |   USD   |  High  | 2025-09-30T14:00:00+00:00 |
+|                                 FOMC Member Goolsbee Speaks                                 |   USD   |  High  | 2025-09-30T17:30:00+00:00 |
+|                                  FOMC Member Logan Speaks                                   |   USD   |  High  | 2025-09-30T23:10:00+00:00 |
+| Italian Manufacturing PMI | French Final Manufacturing PMI | German Final Manufacturing PMI |   EUR   |  High  | 2025-10-01T07:55:00+00:00 |
+|                               ADP Non-Farm Employment Change                                |   USD   |  High  | 2025-10-01T12:15:00+00:00 |
+|        ISM Manufacturing PMI | ISM Manufacturing Prices | Construction Spending m/m         |   USD   |  High  | 2025-10-01T14:00:00+00:00 |
+|        Goods Trade Balance | Household Spending m/m | RBA Financial Stability Review        |   AUD   |  High  | 2025-10-02T01:30:00+00:00 |
+|                                           CPI m/m                                           |   CHF   |  High  | 2025-10-02T06:30:00+00:00 |
+|                                     Unemployment Claims                                     |   USD   |  High  | 2025-10-02T12:30:00+00:00 |
+|                                  FOMC Member Logan Speaks                                   |   USD   |  High  | 2025-10-02T14:30:00+00:00 |
+|                                     BOJ Gov Ueda Speaks                                     |   JPY   |  High  | 2025-10-03T01:05:00+00:00 |
+|        Italian Services PMI | French Final Services PMI | German Final Services PMI         |   EUR   |  High  | 2025-10-03T07:55:00+00:00 |
+|                                ECB President Lagarde Speaks                                 |   EUR   |  High  | 2025-10-03T09:40:00+00:00 |
+|                                 FOMC Member Williams Speaks                                 |   USD   |  High  | 2025-10-03T10:05:00+00:00 |
+|        Average Hourly Earnings m/m | Non-Farm Employment Change | Unemployment Rate         |   USD   |  High  | 2025-10-03T12:30:00+00:00 |
+|                                    BOE Gov Bailey Speaks                                    |   GBP   |  High  | 2025-10-03T13:20:00+00:00 |
+|                                      ISM Services PMI                                       |   USD   |  High  | 2025-10-03T14:00:00+00:00 |
+|                                FOMC Member Jefferson Speaks                                 |   USD   |  High  | 2025-10-03T17:40:00+00:00 |
++---------------------------------------------------------------------------------------------+---------+--------+---------------------------+
