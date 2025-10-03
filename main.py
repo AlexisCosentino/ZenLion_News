@@ -7,7 +7,7 @@ import pandas as pd
 import MetaTrader5 as mt5
 from core.forexfactory_news_fetcher import get_forex_week_filename, get_forex_calendar
 from core.trading_strategy import TradingStrategy
-from core.trading_strategy_multi_timeframe_v2 import TradingStrategyMultiTimeframe
+from core.trading_strategy_multi_timeframe_v2 import TradingStrategyMultiTimeframeV2
 from core.trading_strategy_sandwich import TradingStrategySandwich
 from core.symbol_selector import SymbolSelector
 from core.trading_engine import TradingEngine
