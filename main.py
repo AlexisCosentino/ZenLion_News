@@ -147,7 +147,7 @@ def main():
                     logging.info(f"Found {len(todays_news)} news today")
 
                     # mock_data(todays_news)
-                    test_before_prod()
+                    # test_before_prod()
                     
                     # 3. Vérifier les news à traiter
                     for news in todays_news:
@@ -163,7 +163,7 @@ def main():
 
                                 #Stratégie multitimeframe
                                 comment = f"{news['title'][:10]}_MTFv2"
-                                tradingStrategy = TradingStrategyMultiTimeframe(comment, news['country'])
+                                tradingStrategy = TradingStrategyMultiTimeframeV2(comment, news['country'])
                                 result = tradingStrategy.execute_strategy(datetime.fromisoformat(news['date_utc']).astimezone(TIMEZONE_UTC))
                                 if result:
                                     news_processed(news['title'], filename)

@@ -131,6 +131,7 @@ class TradingStrategyMultiTimeframeV2:
             # Conversion des timestamps
             for df in [m15_data, d1_data, h4_data]:
                 df['time'] = pd.to_datetime(df['time'], unit='s', utc=True )
+                df['time'] = df['time']- timedelta(hours=3)
 
             # --- Détermination de la tendance ---
             daily_trend = self.get_trend(d1_data)
@@ -159,7 +160,8 @@ class TradingStrategyMultiTimeframeV2:
             #    is_valid_range = False
 
             # --- Bougie post-news ---
-            post_news_candle_m15 = m15_data[m15_data['time'] == news_time].iloc[0]
+            post_news_candle_m15 = m15_data[m15_data['time'] >= news_time].iloc[0]
+
 
             logging.info(f'la bougie m15 suivant la news : {post_news_candle_m15}')
 
