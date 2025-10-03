@@ -3,9 +3,11 @@ import os
 from datetime import datetime, timedelta, timezone
 import time
 import pytz
+import pandas as pd
+import MetaTrader5 as mt5
 from core.forexfactory_news_fetcher import get_forex_week_filename, get_forex_calendar
 from core.trading_strategy import TradingStrategy
-from core.trading_strategy_multi_timeframe import TradingStrategyMultiTimeframe
+from core.trading_strategy_multi_timeframe_v2 import TradingStrategyMultiTimeframe
 from core.trading_strategy_sandwich import TradingStrategySandwich
 from core.symbol_selector import SymbolSelector
 from core.trading_engine import TradingEngine
@@ -110,6 +112,12 @@ def mock_data(todays_news):
     todays_news.append(mocked_news)
     return todays_news
 
+def test_before_prod():
+    m15_data = pd.DataFrame(mt5.copy_rates_from_pos("EURUSD", mt5.TIMEFRAME_M15, 0, 100))
+    logging.info(f'derniere bougie : {m15_data.iloc[-1]}')
+    logging.info(f'heure actuel utc : {datetime.now(timezone.utc)}')
+    return
+
 def main():
     mt5 = MT5Client()
     mt5.initialize_mt5()
@@ -137,10 +145,11 @@ def main():
                     logging.info(f"Found {len(todays_news)} news today")
 
                     # mock_data(todays_news)
+                    # test_before_prod()
                     
                     # 3. Vérifier les news à traiter
                     for news in todays_news:
-                        if should_trigger(news):
+                        if should_trigger(news, minutes=15):
                             logging.info(f"\n=== NEWS TRIGGER ===")
                             logging.info(f"Title: {news['title']}")
                             logging.info(f"Time (UTC): {news['date_utc']}")
@@ -149,26 +158,13 @@ def main():
                             
                             # Ici vous ajoutez votre logique de trading
                             if news['impact'] == 'High':
-                                
-                                #Stratégie de base
-                                # comment = news['title'][:10]
-                                # symbol, trend = symbolSelector.get_best_symbol(news['country'])
-                                # if symbol and trend:
-                                #     logging.info(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
-                                #     tradingStrategy = TradingStrategy(symbol, comment)
-                                #     result = tradingStrategy.execute_strategy(trend)
-                                #     if result:
-                                #         news_processed(news['title'], filename)
-                                
+
                                 #Stratégie multitimeframe
-                                comment = f"{news['title'][:10]}_MTF"
-                                symbol, trend = symbolSelector.get_best_symbol_multi_timeframe(news['country'])
-                                if symbol and trend:
-                                    logging.info(f">>> Executing HIGH impact strategy --> {symbol}: {comment}")
-                                    tradingStrategy = TradingStrategyMultiTimeframe(symbol, comment)
-                                    result = tradingStrategy.execute_strategy(trend)
-                                    if result:
-                                        news_processed(news['title'], filename)
+                                comment = f"{news['title'][:10]}_MTFv2"
+                                tradingStrategy = TradingStrategyMultiTimeframe(comment, news['country'])
+                                result = tradingStrategy.execute_strategy(datetime.fromisoformat(news['date_utc']).astimezone(TIMEZONE_UTC))
+                                if result:
+                                    news_processed(news['title'], filename)
 
                         if should_trigger(news, minutes=-1):
                             #launch sandwich strategy
