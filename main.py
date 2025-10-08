@@ -8,6 +8,7 @@ import MetaTrader5 as mt5
 from core.forexfactory_news_fetcher import get_forex_week_filename, get_forex_calendar
 from core.trading_strategy import TradingStrategy
 from core.trading_strategy_multi_timeframe_v2 import TradingStrategyMultiTimeframeV2
+from core.trading_strategy_orb import TradingStrategyOrb
 from core.trading_strategy_sandwich import TradingStrategySandwich
 from core.symbol_selector import SymbolSelector
 from core.trading_engine import TradingEngine
@@ -177,14 +178,18 @@ def main():
                                 result = tradingStrategySandwich.execute_strategy()
                             else:
                                 logging.warning(f"No symbol found for country: {news['country']}")
+                
+                    orb = TradingStrategyOrb()
+                    orb.execute_strategy()
+
 
                 #Récupère le nouveau fichier de news le dimanche soir à 20H30 UTC
                 if now.weekday() == 6 and now.hour == 20 and now.minute == 30:
                     get_forex_calendar()
                     logging.info(">>> Téléchargement du calendrier Forex hebdo")
                     time.sleep(90)
-
-                tradingEngine.close_positions_after_45min()
+                    
+                # TradingEngine.close_positions_after_45min()
                 time.sleep(60)
             except Exception as e:
                 logging.exception("Une erreur s'est produite dans la boucle principale.")
