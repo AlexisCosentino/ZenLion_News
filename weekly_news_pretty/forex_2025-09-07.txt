@@ -1,0 +1,11 @@
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                                                    Title                                                                     | Country | Impact |         Date UTC          |
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                        Bank Lending y/y | Current Account | Final GDP Price Index y/y                                        |   JPY   |  High  | 2025-09-07T23:50:00+00:00 |
+|                                                            Core PPI m/m | PPI m/m                                                            |   USD   |  High  | 2025-09-10T12:30:00+00:00 |
+|                                              Main Refinancing Rate | Monetary Policy Statement                                               |   EUR   |  High  | 2025-09-11T12:15:00+00:00 |
+|                                            Core CPI m/m | CPI m/m | CPI y/y | Unemployment Claims                                            |   USD   |  High  | 2025-09-11T12:30:00+00:00 |
+|                                                             ECB Press Conference                                                             |   EUR   |  High  | 2025-09-11T12:45:00+00:00 |
+| GDP m/m | Construction Output m/m | Goods Trade Balance | Index of Services 3m/3m | Industrial Production m/m | Manufacturing Production m/m |   GBP   |  High  | 2025-09-12T06:00:00+00:00 |
+|                                      Prelim UoM Consumer Sentiment | Prelim UoM Inflation Expectations                                       |   USD   |  High  | 2025-09-12T14:00:00+00:00 |
++----------------------------------------------------------------------------------------------------------------------------------------------+---------+--------+---------------------------+

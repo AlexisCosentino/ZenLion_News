@@ -1,0 +1,173 @@
+[
+  {
+    "title": "ANZ Job Advertisements m/m | Building Approvals m/m | Company Operating Profits q/q",
+    "country": "AUD",
+    "date": "2025-08-31T21:30:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "-1.0%",
+    "date_utc": "2025-09-01T01:30:00+00:00"
+  },
+  {
+    "title": "GDP q/q",
+    "country": "AUD",
+    "date": "2025-09-02T21:30:00-04:00",
+    "impact": "High",
+    "forecast": "0.5%",
+    "previous": "0.2%",
+    "date_utc": "2025-09-03T01:30:00+00:00"
+  },
+  {
+    "title": "RBA Gov Bullock Speaks",
+    "country": "AUD",
+    "date": "2025-09-03T04:00:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-09-03T08:00:00+00:00"
+  },
+  {
+    "title": "Employment Change | Unemployment Rate",
+    "country": "CAD",
+    "date": "2025-09-05T08:30:00-04:00",
+    "impact": "High",
+    "forecast": "9.4K",
+    "previous": "-40.8K",
+    "date_utc": "2025-09-05T12:30:00+00:00"
+  },
+  {
+    "title": "CPI m/m",
+    "country": "CHF",
+    "date": "2025-09-04T02:30:00-04:00",
+    "impact": "High",
+    "forecast": "0.0%",
+    "previous": "0.0%",
+    "date_utc": "2025-09-04T06:30:00+00:00"
+  },
+  {
+    "title": "Italian Manufacturing PMI | French Final Manufacturing PMI | German Final Manufacturing PMI",
+    "country": "EUR",
+    "date": "2025-09-01T03:55:00-04:00",
+    "impact": "High",
+    "forecast": "49.8",
+    "previous": "49.8",
+    "date_utc": "2025-09-01T07:55:00+00:00"
+  },
+  {
+    "title": "ECB President Lagarde Speaks",
+    "country": "EUR",
+    "date": "2025-09-03T03:30:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-09-03T07:30:00+00:00"
+  },
+  {
+    "title": "Italian Services PMI | French Final Services PMI | German Final Services PMI",
+    "country": "EUR",
+    "date": "2025-09-03T03:55:00-04:00",
+    "impact": "High",
+    "forecast": "52.1",
+    "previous": "52.3",
+    "date_utc": "2025-09-03T07:55:00+00:00"
+  },
+  {
+    "title": "Final Manufacturing PMI | M4 Money Supply m/m | Mortgage Approvals",
+    "country": "GBP",
+    "date": "2025-09-01T04:30:00-04:00",
+    "impact": "High",
+    "forecast": "47.3",
+    "previous": "47.3",
+    "date_utc": "2025-09-01T08:30:00+00:00"
+  },
+  {
+    "title": "ISM Manufacturing PMI | ISM Manufacturing Prices | Construction Spending m/m",
+    "country": "USD",
+    "date": "2025-09-02T10:00:00-04:00",
+    "impact": "High",
+    "forecast": "48.9",
+    "previous": "48.0",
+    "date_utc": "2025-09-02T14:00:00+00:00"
+  },
+  {
+    "title": "FOMC Member Musalem Speaks",
+    "country": "USD",
+    "date": "2025-09-03T09:00:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-09-03T13:00:00+00:00"
+  },
+  {
+    "title": "JOLTS Job Openings",
+    "country": "USD",
+    "date": "2025-09-03T10:00:00-04:00",
+    "impact": "High",
+    "forecast": "7.24M",
+    "previous": "7.44M",
+    "date_utc": "2025-09-03T14:00:00+00:00"
+  },
+  {
+    "title": "FOMC Member Kashkari Speaks",
+    "country": "USD",
+    "date": "2025-09-03T13:30:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-09-03T17:30:00+00:00"
+  },
+  {
+    "title": "ADP Non-Farm Employment Change",
+    "country": "USD",
+    "date": "2025-09-04T08:15:00-04:00",
+    "impact": "High",
+    "forecast": "71K",
+    "previous": "104K",
+    "date_utc": "2025-09-04T12:15:00+00:00"
+  },
+  {
+    "title": "Unemployment Claims | Revised Nonfarm Productivity q/q | Revised Unit Labor Costs q/q",
+    "country": "USD",
+    "date": "2025-09-04T08:30:00-04:00",
+    "impact": "High",
+    "forecast": "229K",
+    "previous": "229K",
+    "date_utc": "2025-09-04T12:30:00+00:00"
+  },
+  {
+    "title": "ISM Services PMI",
+    "country": "USD",
+    "date": "2025-09-04T10:00:00-04:00",
+    "impact": "High",
+    "forecast": "50.5",
+    "previous": "50.1",
+    "date_utc": "2025-09-04T14:00:00+00:00"
+  },
+  {
+    "title": "FOMC Member Williams Speaks",
+    "country": "USD",
+    "date": "2025-09-04T12:05:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-09-04T16:05:00+00:00"
+  },
+  {
+    "title": "FOMC Member Goolsbee Speaks",
+    "country": "USD",
+    "date": "2025-09-04T19:00:00-04:00",
+    "impact": "High",
+    "forecast": "",
+    "previous": "",
+    "date_utc": "2025-09-04T23:00:00+00:00"
+  },
+  {
+    "title": "Average Hourly Earnings m/m | Non-Farm Employment Change | Unemployment Rate",
+    "country": "USD",
+    "date": "2025-09-05T08:30:00-04:00",
+    "impact": "High",
+    "forecast": "0.3%",
+    "previous": "0.3%",
+    "date_utc": "2025-09-05T12:30:00+00:00"
+  }
+]

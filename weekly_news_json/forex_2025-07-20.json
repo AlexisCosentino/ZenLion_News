@@ -63,7 +63,11 @@
         "impact": "High",
         "forecast": "89.2",
         "previous": "88.4",
-        "date_utc": "2025-07-25T08:00:00+00:00"
+        "date_utc": "2025-07-25T08:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-25T08:05:06.200579+00:00"
+        }
     },
     {
         "title": "BOE Gov Bailey Speaks",
@@ -84,7 +88,7 @@
         "date_utc": "2025-07-24T08:30:00+00:00",
         "processed": {
             "status": true,
-            "timestamp": "2025-07-24T08:35:49.700906+00:00"
+            "timestamp": "2025-07-24T13:50:45.720507+00:00"
         }
     },
     {
@@ -143,7 +147,11 @@
         "impact": "High",
         "forecast": "229K",
         "previous": "221K",
-        "date_utc": "2025-07-24T12:30:00+00:00"
+        "date_utc": "2025-07-24T12:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-07-24T12:35:52.469336+00:00"
+        }
     },
     {
         "title": "Flash Manufacturing PMI | Flash Services PMI",

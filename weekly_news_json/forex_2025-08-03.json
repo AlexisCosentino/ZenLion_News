@@ -1,0 +1,139 @@
+[
+    {
+        "title": "Employment Change | Unemployment Rate",
+        "country": "CAD",
+        "date": "2025-08-08T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "15.3K",
+        "previous": "83.1K",
+        "date_utc": "2025-08-08T12:30:00+00:00"
+    },
+    {
+        "title": "CPI m/m",
+        "country": "CHF",
+        "date": "2025-08-04T02:30:00-04:00",
+        "impact": "High",
+        "forecast": "-0.2%",
+        "previous": "0.2%",
+        "date_utc": "2025-08-04T06:30:00+00:00"
+    },
+    {
+        "title": "Italian Services PMI | French Final Services PMI | German Final Services PMI",
+        "country": "EUR",
+        "date": "2025-08-05T03:55:00-04:00",
+        "impact": "High",
+        "forecast": "52.5",
+        "previous": "52.1",
+        "date_utc": "2025-08-05T07:55:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-08-05T08:00:33.738927+00:00"
+        }
+    },
+    {
+        "title": "ECB Economic Bulletin",
+        "country": "EUR",
+        "date": "2025-08-07T04:00:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-08-07T08:00:00+00:00"
+    },
+    {
+        "title": "BOE Monetary Policy Report | Monetary Policy Summary | MPC Official Bank Rate Votes | Official Bank Rate",
+        "country": "GBP",
+        "date": "2025-08-07T07:00:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-08-07T11:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-08-07T11:05:12.867039+00:00"
+        }
+    },
+    {
+        "title": "Bank Lending y/y | BOJ Summary of Opinions | Current Account",
+        "country": "JPY",
+        "date": "2025-08-07T19:50:00-04:00",
+        "impact": "High",
+        "forecast": "2.7%",
+        "previous": "2.8%",
+        "date_utc": "2025-08-07T23:50:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-08-07T23:55:21.608822+00:00"
+        }
+    },
+    {
+        "title": "Employment Change q/q | Unemployment Rate | Labor Cost Index q/q",
+        "country": "NZD",
+        "date": "2025-08-05T18:45:00-04:00",
+        "impact": "High",
+        "forecast": "-0.1%",
+        "previous": "0.1%",
+        "date_utc": "2025-08-05T22:45:00+00:00"
+    },
+    {
+        "title": "ISM Services PMI",
+        "country": "USD",
+        "date": "2025-08-05T10:00:00-04:00",
+        "impact": "High",
+        "forecast": "51.5",
+        "previous": "50.8",
+        "date_utc": "2025-08-05T14:00:00+00:00"
+    },
+    {
+        "title": "FOMC Member Daly Speaks",
+        "country": "USD",
+        "date": "2025-08-06T12:45:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-08-06T16:45:00+00:00"
+    },
+    {
+        "title": "FOMC Member Collins Speaks | FOMC Member Cook Speaks",
+        "country": "USD",
+        "date": "2025-08-06T14:00:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-08-06T18:00:00+00:00"
+    },
+    {
+        "title": "Unemployment Claims | Prelim Nonfarm Productivity q/q | Prelim Unit Labor Costs q/q",
+        "country": "USD",
+        "date": "2025-08-07T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "221K",
+        "previous": "218K",
+        "date_utc": "2025-08-07T12:30:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-08-07T12:35:13.918908+00:00"
+        }
+    },
+    {
+        "title": "FOMC Member Bostic Speaks",
+        "country": "USD",
+        "date": "2025-08-07T10:00:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-08-07T14:00:00+00:00",
+        "processed": {
+            "status": true,
+            "timestamp": "2025-08-07T14:05:15.017414+00:00"
+        }
+    },
+    {
+        "title": "FOMC Member Musalem Speaks",
+        "country": "USD",
+        "date": "2025-08-08T10:20:00-04:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": "",
+        "date_utc": "2025-08-08T14:20:00+00:00"
+    }
+]
