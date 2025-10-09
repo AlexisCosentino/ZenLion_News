@@ -1,0 +1,30 @@
++-------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                              Title                                              | Country | Impact |         Date UTC          |
++-------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
+|                                  ECB President Lagarde Speaks                                   |   EUR   |  High  | 2025-10-06T17:00:00+00:00 |
+|                                      BOE Gov Bailey Speaks                                      |   GBP   |  High  | 2025-10-06T17:30:00+00:00 |
+|                                    FOMC Member Schmid Speaks                                    |   USD   |  High  | 2025-10-06T21:00:00+00:00 |
+|       FOMC Member Bostic Speaks | FOMC Member Bowman Speaks | RCM/TIPP Economic Optimism        |   USD   |  High  | 2025-10-07T14:10:00+00:00 |
+|                                    FOMC Member Miran Speaks                                     |   USD   |  High  | 2025-10-07T14:30:00+00:00 |
+|                                   FOMC Member Kashkari Speaks                                   |   USD   |  High  | 2025-10-07T15:30:00+00:00 |
+|                                  ECB President Lagarde Speaks                                   |   EUR   |  High  | 2025-10-07T16:10:00+00:00 |
+|                                    FOMC Member Miran Speaks                                     |   USD   |  High  | 2025-10-07T20:05:00+00:00 |
+|                            Official Cash Rate | RBNZ Rate Statement                             |   NZD   |  High  | 2025-10-08T01:00:00+00:00 |
+|                                       BOJ Gov Ueda Speaks                                       |   JPY   |  High  | 2025-10-08T01:45:00+00:00 |
+|                      FOMC Member Musalem Speaks | FOMC Member Barr Speaks                       |   USD   |  High  | 2025-10-08T13:30:00+00:00 |
+|                                  ECB President Lagarde Speaks                                   |   EUR   |  High  | 2025-10-08T16:00:00+00:00 |
+|                                      FOMC Meeting Minutes                                       |   USD   |  High  | 2025-10-08T18:00:00+00:00 |
+|                                   FOMC Member Kashkari Speaks                                   |   USD   |  High  | 2025-10-08T19:15:00+00:00 |
+|                                     FOMC Member Barr Speaks                                     |   USD   |  High  | 2025-10-08T21:45:00+00:00 |
+|                              ECB Monetary Policy Meeting Accounts                               |   EUR   |  High  | 2025-10-09T11:30:00+00:00 |
+| Unemployment Claims | Unemployment Claims | Fed Chair Powell Speaks | FOMC Member Bowman Speaks |   USD   |  High  | 2025-10-09T12:35:00+00:00 |
+|                                     FOMC Member Barr Speaks                                     |   USD   |  High  | 2025-10-09T17:00:00+00:00 |
+|                                    FOMC Member Bowman Speaks                                    |   USD   |  High  | 2025-10-09T19:45:00+00:00 |
+|                                     RBA Gov Bullock Speaks                                      |   AUD   |  High  | 2025-10-10T01:00:00+00:00 |
+|                                     FOMC Member Daly Speaks                                     |   USD   |  High  | 2025-10-10T01:40:00+00:00 |
+|                              Employment Change | Unemployment Rate                              |   CAD   |  High  | 2025-10-10T12:30:00+00:00 |
+|          Average Hourly Earnings m/m | Non-Farm Employment Change | Unemployment Rate           |   USD   |  High  | 2025-10-10T12:32:00+00:00 |
+|                                   FOMC Member Goolsbee Speaks                                   |   USD   |  High  | 2025-10-10T13:45:00+00:00 |
+|                Prelim UoM Consumer Sentiment | Prelim UoM Inflation Expectations                |   USD   |  High  | 2025-10-10T14:00:00+00:00 |
+|                                   FOMC Member Musalem Speaks                                    |   USD   |  High  | 2025-10-10T17:00:00+00:00 |
++-------------------------------------------------------------------------------------------------+---------+--------+---------------------------+
