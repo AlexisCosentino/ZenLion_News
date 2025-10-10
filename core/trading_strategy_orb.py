@@ -87,8 +87,6 @@ class TradingStrategyOrb:
         server_time = datetime.fromtimestamp(rates[0]['time'], tz=timezone.utc)
         utc_now = datetime.now(timezone.utc).replace(second=0, microsecond=0)
         offset_hours = round((server_time - utc_now).total_seconds() / 3600)
-        print(server_time.strftime("%Y-%m-%d %H:%M:%S"))
-        print(offset_hours)
         return offset_hours
 
 
@@ -182,7 +180,7 @@ class TradingStrategyOrb:
                 # Conversion des timestamps
                 for df in [m1_data, h4_data]:
                     df['time'] = pd.to_datetime(df['time'], unit='s', utc=True )
-                    df['time'] = df['time']- timedelta(hours=3)
+                    df['time'] = df['time']- timedelta(hours=server_offset)
 
                 # --- Détermination de la tendance ---
                 h4_trend = self.get_trend(h4_data)
