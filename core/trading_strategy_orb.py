@@ -84,8 +84,8 @@ class TradingStrategyOrb:
 
     def get_server_offset(self, symbol):
         rates = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_M1, 0, 1)
-        server_time = datetime.utcfromtimestamp(rates[0]['time'])
-        utc_now = now = datetime.now(timezone.utc).replace(second=0, microsecond=0)
+        server_time = datetime.fromtimestamp(rates[0]['time'], tz=timezone.utc)
+        utc_now = datetime.now(timezone.utc).replace(second=0, microsecond=0)
         offset_hours = round((server_time - utc_now).total_seconds() / 3600)
         return offset_hours
 
