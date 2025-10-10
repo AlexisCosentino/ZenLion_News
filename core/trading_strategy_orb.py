@@ -81,12 +81,13 @@ class TradingStrategyOrb:
             return False
         return any(pos.symbol == symbol for pos in positions)
 
-#    def get_server_offset(self, symbol):
-#	rates = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_M1, 0, 1)
-#	server_time = datetime.utcfromtimestamp(rates[0]['time'])
-#	utc_now = now = datetime.now(timezone.utc).replace(second=0, microsecond=0)
-#	offset_hours = round((server_time - utc_now).total_seconds() / 3600)
-#	return offset_hours
+
+    def get_server_offset(self, symbol):
+        rates = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_M1, 0, 1)
+        server_time = datetime.utcfromtimestamp(rates[0]['time'])
+        utc_now = now = datetime.now(timezone.utc).replace(second=0, microsecond=0)
+        offset_hours = round((server_time - utc_now).total_seconds() / 3600)
+        return offset_hours
 
 
     def get_trend(self, df):
@@ -158,8 +159,8 @@ class TradingStrategyOrb:
             signal = None
             self.symbol = data["symbol"]
             now = datetime.now(timezone.utc)
-	    #server_offset = self.get_server_offset(self.symbol)
-	    #print(server_offset)
+            server_offset = self.get_server_offset(self.symbol)
+            print(server_offset)
             # reconstruire datetime du jour pour l'ouverture
             open_utc = now.replace(
                 hour=data["open_utc_hour"], 
@@ -202,7 +203,8 @@ class TradingStrategyOrb:
                     tp = most_recent_candle['close'] - (2 * atr_value)
                 
                 if signal is not None:
-                    logging.info(f">>> Executing ORB strategy {signal} --> {self.symbol}: ORB")
+                    logging.info(f">>> Executing ORB strategy {signal} --> {self.symbol}")
+                    logging.info(f">>> Stop-Loss: {sl}, Take-Profit: {tp}, ATR Value: {atr_value}")
                     trade = self.engine.place_order(self.symbol, signal, 0.1, sl, tp, "ORB")
             else:
                 print(f"{data['symbol']} -> Pas encore dans la fenêtre")
