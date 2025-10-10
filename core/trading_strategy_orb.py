@@ -87,6 +87,8 @@ class TradingStrategyOrb:
         server_time = datetime.fromtimestamp(rates[0]['time'], tz=timezone.utc)
         utc_now = datetime.now(timezone.utc).replace(second=0, microsecond=0)
         offset_hours = round((server_time - utc_now).total_seconds() / 3600)
+        print(server_time.strftime("%Y-%m-%d %H:%M:%S"))
+        print(offset_hours)
         return offset_hours
 
 
@@ -160,7 +162,6 @@ class TradingStrategyOrb:
             self.symbol = data["symbol"]
             now = datetime.now(timezone.utc)
             server_offset = self.get_server_offset(self.symbol)
-            print(server_offset)
             # reconstruire datetime du jour pour l'ouverture
             open_utc = now.replace(
                 hour=data["open_utc_hour"], 
