@@ -102,6 +102,19 @@ class TradingStrategyOrb:
             return "range"
     
 
+    def breakout_volume_confirm(df, lookback=10, factor=1.2):
+        """
+        Vérifie si la bougie de cassure a un volume supérieur à la moyenne des 'lookback' bougies.
+        
+        df : DataFrame avec colonnes 'tick_volume'
+        lookback : nombre de bougies pour calculer le volume moyen
+        factor : multiplicateur pour décider si le breakout est significatif
+        return : True si cassure valide, False sinon
+        """
+        volume_avg = df['tick_volume'].tail(lookback).mean()
+        last_volume = df['tick_volume'].iloc[-1]
+        return last_volume > volume_avg * factor
+    
         
     def get_range(self, m1_data, range_minute):
         filename = "daily_range.json"
@@ -192,11 +205,11 @@ class TradingStrategyOrb:
 
                 most_recent_candle = m1_data.iloc[-1]
                 range_size = abs(high - low) * 2
-                if most_recent_candle['close'] > high and not self.news_soon() and h4_trend == 'bullish':
+                if most_recent_candle['close'] > high and not self.news_soon() and h4_trend == 'bullish' and self.breakout_volume_confirm(h4_data):
                     signal = "buy"
                     sl = low - atr_value
                     tp = most_recent_candle['close'] + (2 * atr_value)
-                elif most_recent_candle['close'] < low and not self.news_soon() and h4_trend == 'bearish':
+                elif most_recent_candle['close'] < low and not self.news_soon() and h4_trend == 'bearish' and self.breakout_volume_confirm(h4_data):
                     signal = "sell"
                     sl = high + atr_value
                     tp = most_recent_candle['close'] - (2 * atr_value)
