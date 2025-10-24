@@ -102,7 +102,7 @@ class TradingStrategyOrb:
             return "range"
     
 
-    def breakout_volume_confirm(df, lookback=10, factor=1.2):
+    def breakout_volume_confirm(self, df, lookback=10, factor=2):
         """
         Vérifie si la bougie de cassure a un volume supérieur à la moyenne des 'lookback' bougies.
         

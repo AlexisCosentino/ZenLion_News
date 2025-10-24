@@ -4,5 +4,467 @@
         "low": 9499.74,
         "high": 9510.79,
         "time_recorded_utc": "09-10"
+    },
+    {
+        "name": "2025-10-09_[DJI30]_ORB",
+        "low": 46376.23,
+        "high": 46452.11,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-09_[SP500]_ORB",
+        "low": 6724.92,
+        "high": 6740.67,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-09_[NQ100]_ORB",
+        "low": 25007.77,
+        "high": 25073.46,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-10_[JP225]_ORB",
+        "low": 48298.28,
+        "high": 48582.92,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-10_GERMANY40_ORB",
+        "low": 24660.01,
+        "high": 24690.96,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-10_[CAC40]_ORB",
+        "low": 8054.22,
+        "high": 8069.46,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-10_[FTSE100]_ORB",
+        "low": 9492.18,
+        "high": 9503.92,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-10_[DJI30]_ORB",
+        "low": 46463.94,
+        "high": 46547.32,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-10_[SP500]_ORB",
+        "low": 6690.28,
+        "high": 6753.66,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-10_[NQ100]_ORB",
+        "low": 24909.31,
+        "high": 25173.93,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-13_[JP225]_ORB",
+        "low": 46378.3,
+        "high": 46538.3,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-13_GERMANY40_ORB",
+        "low": 24361.17,
+        "high": 24450.97,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-13_[CAC40]_ORB",
+        "low": 7946.88,
+        "high": 7986.3,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-13_[FTSE100]_ORB",
+        "low": 9438.89,
+        "high": 9458.46,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-13_[DJI30]_ORB",
+        "low": 45855.96,
+        "high": 46004.71,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-13_[SP500]_ORB",
+        "low": 6622.69,
+        "high": 6647.94,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-13_[NQ100]_ORB",
+        "low": 24570.45,
+        "high": 24714.64,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-14_[JP225]_ORB",
+        "low": 47313.3,
+        "high": 47718.3,
+        "time_recorded_utc": "00-22"
+    },
+    {
+        "name": "2025-10-14_GERMANY40_ORB",
+        "low": 24116.96,
+        "high": 24228.66,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-14_[CAC40]_ORB",
+        "low": 7851.67,
+        "high": 7875.66,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-14_[FTSE100]_ORB",
+        "low": 9408.0,
+        "high": 9422.12,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-14_[DJI30]_ORB",
+        "low": 45895.93,
+        "high": 46024.18,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-14_[SP500]_ORB",
+        "low": 6612.68,
+        "high": 6625.68,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-14_[NQ100]_ORB",
+        "low": 24500.54,
+        "high": 24573.79,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-15_[JP225]_ORB",
+        "low": 46940.95,
+        "high": 47162.1,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-15_GERMANY40_ORB",
+        "low": 24261.64,
+        "high": 24315.44,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-15_[CAC40]_ORB",
+        "low": 8087.5,
+        "high": 8115.1,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-15_[FTSE100]_ORB",
+        "low": 9432.62,
+        "high": 9444.55,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-15_[DJI30]_ORB",
+        "low": 46561.86,
+        "high": 46674.86,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-15_[SP500]_ORB",
+        "low": 6710.01,
+        "high": 6723.01,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-15_[NQ100]_ORB",
+        "low": 24908.8,
+        "high": 24947.43,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-16_[JP225]_ORB",
+        "low": 47933.25,
+        "high": 48177.98,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-16_GERMANY40_ORB",
+        "low": 24085.42,
+        "high": 24230.12,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-16_[CAC40]_ORB",
+        "low": 8050.16,
+        "high": 8093.12,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-16_[FTSE100]_ORB",
+        "low": 9401.51,
+        "high": 9416.46,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-16_[DJI30]_ORB",
+        "low": 46302.89,
+        "high": 46435.02,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-16_[SP500]_ORB",
+        "low": 6691.58,
+        "high": 6711.08,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-16_[NQ100]_ORB",
+        "low": 24918.93,
+        "high": 25014.8,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-17_[JP225]_ORB",
+        "low": 47715.26,
+        "high": 47915.04,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-17_GERMANY40_ORB",
+        "low": 23709.58,
+        "high": 23889.11,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-17_[CAC40]_ORB",
+        "low": 8076.1,
+        "high": 8101.3,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-17_[FTSE100]_ORB",
+        "low": 9274.9,
+        "high": 9300.87,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-17_[DJI30]_ORB",
+        "low": 45975.35,
+        "high": 46093.73,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-17_[SP500]_ORB",
+        "low": 6614.02,
+        "high": 6643.27,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-17_[NQ100]_ORB",
+        "low": 24588.2,
+        "high": 24736.76,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-20_[JP225]_ORB",
+        "low": 48279.06,
+        "high": 48496.22,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-20_GERMANY40_ORB",
+        "low": 24016.09,
+        "high": 24121.39,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-20_[CAC40]_ORB",
+        "low": 8197.71,
+        "high": 8227.43,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-20_[FTSE100]_ORB",
+        "low": 9397.19,
+        "high": 9406.55,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-20_[DJI30]_ORB",
+        "low": 46503.82,
+        "high": 46648.82,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-20_[SP500]_ORB",
+        "low": 6722.71,
+        "high": 6739.21,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-20_[NQ100]_ORB",
+        "low": 25114.32,
+        "high": 25169.76,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-21_[JP225]_ORB",
+        "low": 49450.3,
+        "high": 49740.3,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-21_GERMANY40_ORB",
+        "low": 24277.81,
+        "high": 24322.07,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-21_[CAC40]_ORB",
+        "low": 8197.91,
+        "high": 8211.99,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-21_[FTSE100]_ORB",
+        "low": 9425.7,
+        "high": 9433.22,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-21_[DJI30]_ORB",
+        "low": 46864.94,
+        "high": 47001.03,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-21_[SP500]_ORB",
+        "low": 6726.8,
+        "high": 6751.3,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-21_[NQ100]_ORB",
+        "low": 25054.75,
+        "high": 25154.0,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-22_[JP225]_ORB",
+        "low": 48870.3,
+        "high": 49275.3,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-22_GERMANY40_ORB",
+        "low": 24280.35,
+        "high": 24330.05,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-22_[CAC40]_ORB",
+        "low": 8192.34,
+        "high": 8220.53,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-22_[FTSE100]_ORB",
+        "low": 9478.66,
+        "high": 9491.5,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-22_[DJI30]_ORB",
+        "low": 46768.78,
+        "high": 46848.65,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-22_[SP500]_ORB",
+        "low": 6705.04,
+        "high": 6725.29,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-22_[NQ100]_ORB",
+        "low": 24905.72,
+        "high": 25031.66,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-23_[JP225]_ORB",
+        "low": 48396.3,
+        "high": 48661.3,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-23_GERMANY40_ORB",
+        "low": 24172.86,
+        "high": 24221.86,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-23_[CAC40]_ORB",
+        "low": 8190.3,
+        "high": 8238.82,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-23_[FTSE100]_ORB",
+        "low": 9519.12,
+        "high": 9527.7,
+        "time_recorded_utc": "08-20"
+    },
+    {
+        "name": "2025-10-23_[DJI30]_ORB",
+        "low": 46546.26,
+        "high": 46674.14,
+        "time_recorded_utc": "14-50"
+    },
+    {
+        "name": "2025-10-23_[SP500]_ORB",
+        "low": 6714.03,
+        "high": 6728.28,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-23_[NQ100]_ORB",
+        "low": 24993.44,
+        "high": 25055.69,
+        "time_recorded_utc": "15-00"
+    },
+    {
+        "name": "2025-10-24_[JP225]_ORB",
+        "low": 48954.17,
+        "high": 49178.94,
+        "time_recorded_utc": "00-21"
+    },
+    {
+        "name": "2025-10-24_GERMANY40_ORB",
+        "low": 24238.35,
+        "high": 24302.05,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-24_[CAC40]_ORB",
+        "low": 8232.64,
+        "high": 8264.55,
+        "time_recorded_utc": "07-20"
+    },
+    {
+        "name": "2025-10-24_[FTSE100]_ORB",
+        "low": 9572.65,
+        "high": 9586.65,
+        "time_recorded_utc": "08-20"
     }
 ]
